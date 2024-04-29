@@ -1,0 +1,38 @@
+
+Full command = /opt/ericsson/amos/moshell/mobatch /home/shared/common/Overnight_Work/Rehomes/sitelist /home/shared/common/Overnight_Work/Rehomes/Rehome_Postchecks /home/shared/common/Overnight_Work/Rehomes/Postchecks
+Sitefile = /home/shared/common/Overnight_Work/Rehomes/sitelist. Number of sites = 6
+Command file = /home/shared/common/Overnight_Work/Rehomes/Rehome_Postchecks
+Timeout set to 30 minutes (default value)
+Wait interval set to 2.5 seconds
+Maximum number of parallel processes set to 10 (default value)
+
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Postchecks
+
+###########################################################################################
+>>>>> STARTED (pid)
+** FINISHED (result)              STATUS (started, finished, queue, running, sites running)
+###########################################################################################
+>>>>> M2CN9310A (1795034)          1s  0f  5q  1r: M2CN9310A 
+>>>>> M2CN9310A2 (1795036)         2s  0f  4q  2r: M2CN9310A M2CN9310A2 
+>>>>> M2CN9310A3 (1795039)         3s  0f  3q  3r: M2CN9310A M2CN9310A2 M2CN9310A3 
+>>>>> M2BR8830A (1795041)          4s  0f  2q  4r: M2BR8830A M2CN9310A M2CN9310A2 M2CN9310A3 
+>>>>> M2BR8830A3 (1795044)         5s  0f  1q  5r: M2BR8830A M2BR8830A3 M2CN9310A M2CN9310A2 M2CN9310A3 
+>>>>> N2BR8830A (1795046)          6s  0f  0q  6r: M2BR8830A M2BR8830A3 M2CN9310A M2CN9310A2 M2CN9310A3 N2BR8830A 
+** N2BR8830A (OK)                  6s  1f  0q  5r: M2BR8830A M2BR8830A3 M2CN9310A M2CN9310A2 M2CN9310A3 
+** M2CN9310A2 (OK)                 6s  2f  0q  4r: M2BR8830A M2BR8830A3 M2CN9310A M2CN9310A3 
+** M2BR8830A (OK)                  6s  3f  0q  3r: M2BR8830A3 M2CN9310A M2CN9310A3 
+** M2CN9310A (OK)                  6s  4f  0q  2r: M2BR8830A3 M2CN9310A3 
+** M2BR8830A3 (OK)                 6s  5f  0q  1r: M2CN9310A3 
+** M2CN9310A3 (OK)                 6s  6f  0q  0r: 
+###########################################################################################
+
+OK            1m43s   M2CN9310A
+OK            1m39s   M2CN9310A2
+OK            2m6s    M2CN9310A3
+OK            1m41s   M2BR8830A
+OK            1m46s   M2BR8830A3
+OK            1m23s   N2BR8830A
+
+Total mobatch duration: 2m9s
+Average duration per site with status OK: 1m43s
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Postchecks

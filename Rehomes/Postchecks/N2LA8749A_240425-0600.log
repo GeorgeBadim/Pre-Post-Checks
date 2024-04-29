@@ -1,0 +1,565 @@
+Log start: 240425-060018 - 11.69.7.10 - moshell 24.0c - /home/shared/common/Overnight_Work/Rehomes/Postchecks/N2LA8749A_240425-0600.log
+
+N2LA8749A> 
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> #		Change JobName and any parameter that needs changing case by case basis    		   #
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> # 		PUT A # SIGN IN FRONT OF ANYTHING YOU DONT WANT TO USE ON THIS SCRIPT  			   #   
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> 
+
+N2LA8749A> #$arfcnDL = 507708
+
+N2LA8749A> #$jobname = Rehome_SL_Prechecks
+
+N2LA8749A> 
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> #				Script Specifics - This is modifiable to your needs						   #
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> #	   FOR SETM COMMANDS YOU HAVE TO REMOVE THE GS+ AND GS- from the script                #
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> ###############################
+
+N2LA8749A> #### PRECHECK / LOCK / CV #####
+
+N2LA8749A> ###############################
+
+N2LA8749A> 
+
+N2LA8749A> 
+
+N2LA8749A> lt all
+
+240425-06:00:18-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+Connected to 11.69.7.10 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=N2LA8749A,ManagedElement=N2LA8749A)
+
+Last MO: 18096. Loaded 18096 MOs. Total: 18097 MOs.
+
+N2LA8749A> 
+
+N2LA8749A> st FDD|TDD|NRCellDU|NbIot
+
+240425-06:00:24-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+ 4396  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A2LA8749A11
+ 4399  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A2LA8749A12
+ 4402  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A2LA8749A21
+ 4405  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A2LA8749A22
+ 4408  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A2LA8749A31
+ 4411  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A2LA8749A32
+ 5003  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllRssiNpuschReadings
+ 5004  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllSinrNpuschReadings
+ 5005  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllStatus
+===================================================================================
+Total: 9 MOs
+
+N2LA8749A> 
+
+N2LA8749A> st termpointtognb=1
+
+240425-06:00:24-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+===================================================================================
+Total: 0 MOs
+
+N2LA8749A> get ^GNB.*=1 gNBId$
+
+240425-06:00:24-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+GNBCUCPFunction=1                                       gNBId             1369972
+GNBCUUPFunction=1                                       gNBId             1369972
+GNBDUFunction=1                                         gNBId             1369972
+=================================================================================================================
+Total: 3 MOs
+
+
+N2LA8749A> get FUnction=1 nbid$
+
+240425-06:00:25-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+GNBCUCPFunction=1                                       gNBId             1369972
+NRNetwork=1,ExternalGNBCUCPFunction=1350110             gNBId             1350110
+GNBCUUPFunction=1                                       gNBId             1369972
+GNBDUFunction=1                                         gNBId             1369972
+ExtGNBDUPartnerFunction=1                               gNBId             1350110
+=================================================================================================================
+Total: 5 MOs
+
+
+N2LA8749A> st term
+
+240425-06:00:25-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+  222  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_128768,TermPointToENodeB=auto1
+  224  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_134734,TermPointToENodeB=auto1
+  226  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_139165,TermPointToENodeB=auto1
+  230  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_307051,TermPointToENodeB=auto1
+  234  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_307053,TermPointToENodeB=auto1
+  238  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310299,TermPointToENodeB=auto1
+  243  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310315,TermPointToENodeB=auto1
+  245  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310317,TermPointToENodeB=auto1
+  247  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310319,TermPointToENodeB=auto1
+  249  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310823,TermPointToENodeB=auto1
+  251  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310836,TermPointToENodeB=auto1
+  253  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310840,TermPointToENodeB=auto1
+  255  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310843,TermPointToENodeB=auto1
+  258  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310876,TermPointToENodeB=auto1
+  260  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_315338,TermPointToENodeB=auto1
+  268  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_315340,TermPointToENodeB=auto1
+  270  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_315342,TermPointToENodeB=auto1
+  274  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_331466,TermPointToENodeB=auto1
+  276  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_343422,TermPointToENodeB=auto1
+  278  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_343739,TermPointToENodeB=auto1
+  281  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_345611,TermPointToENodeB=auto1
+  283  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_42988,TermPointToENodeB=auto1
+  285  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_42989,TermPointToENodeB=auto1
+  287  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_42990,TermPointToENodeB=auto1
+  289  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_43165,TermPointToENodeB=auto1
+  291  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_43540,TermPointToENodeB=auto1
+  293  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_43560,TermPointToENodeB=auto1
+  295  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_43561,TermPointToENodeB=auto1
+  299  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_43562,TermPointToENodeB=auto1
+  301  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_44049,TermPointToENodeB=auto1
+  304  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46274,TermPointToENodeB=auto1
+  306  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46659,TermPointToENodeB=auto1
+  308  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46660,TermPointToENodeB=auto1
+  312  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46736,TermPointToENodeB=auto1
+  320  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_47548,TermPointToENodeB=auto1
+  322  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_47549,TermPointToENodeB=auto1
+  324  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_47550,TermPointToENodeB=auto1
+  328  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49045,TermPointToENodeB=auto1
+  330  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49152,TermPointToENodeB=auto1
+  338  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49486,TermPointToENodeB=auto1
+  340  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49487,TermPointToENodeB=auto1
+  343  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49559,TermPointToENodeB=auto1
+  345  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49560,TermPointToENodeB=auto1
+  355  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49655,TermPointToENodeB=auto1
+  357  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49656,TermPointToENodeB=auto1
+  361  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49657,TermPointToENodeB=auto1
+  363  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49823,TermPointToENodeB=auto1
+  366  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49830,TermPointToENodeB=auto1
+  368  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49857,TermPointToENodeB=auto1
+  373  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_50270,TermPointToENodeB=auto1
+  375  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_50272,TermPointToENodeB=auto1
+  377  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_50582,TermPointToENodeB=auto1
+  379  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_50786,TermPointToENodeB=auto1
+  384  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_52247,TermPointToENodeB=auto1
+  386  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_52248,TermPointToENodeB=auto1
+  388  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_52249,TermPointToENodeB=auto1
+  392  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54190,TermPointToENodeB=auto1
+  394  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54565,TermPointToENodeB=auto1
+  396  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54755,TermPointToENodeB=auto1
+  398  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54767,TermPointToENodeB=auto1
+  400  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54900,TermPointToENodeB=auto1
+  402  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54901,TermPointToENodeB=auto1
+  404  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55191,TermPointToENodeB=auto1
+  406  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55271,TermPointToENodeB=auto1
+  410  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55505,TermPointToENodeB=auto1
+  412  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55515,TermPointToENodeB=auto1
+  414  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55544,TermPointToENodeB=auto1
+  417  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55547,TermPointToENodeB=auto1
+  420  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55579,TermPointToENodeB=auto1
+  425  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55714,TermPointToENodeB=auto1
+  428  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55722,TermPointToENodeB=auto1
+  430  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55742,TermPointToENodeB=auto1
+  433  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55922,TermPointToENodeB=auto1
+  437  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_56258,TermPointToENodeB=auto1
+  440  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_56690,TermPointToENodeB=auto1
+  443  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_57512,TermPointToENodeB=auto1
+  446  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_58807,TermPointToENodeB=auto1
+  449  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_59303,TermPointToENodeB=auto1
+  451  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_877337,TermPointToENodeB=auto1
+ 1012  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=1350110,TermPointToGNodeB=auto1
+ 1020  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1081607,TermPointToGNodeB=auto1
+ 1040  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1081648,TermPointToGNodeB=auto1
+ 1066  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1088673,TermPointToGNodeB=auto1
+ 1080  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1089030,TermPointToGNodeB=auto1
+ 1094  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1090127,TermPointToGNodeB=auto1
+ 1108  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1090149,TermPointToGNodeB=auto1
+ 1119  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1312830,TermPointToGNodeB=auto1
+ 1130  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316031,TermPointToGNodeB=auto1
+ 1141  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316461,TermPointToGNodeB=auto1
+ 1152  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316695,TermPointToGNodeB=auto1
+ 1166  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316696,TermPointToGNodeB=auto1
+ 1177  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316697,TermPointToGNodeB=auto1
+ 1185  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316698,TermPointToGNodeB=auto1
+ 1196  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316707,TermPointToGNodeB=auto1
+ 1207  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316899,TermPointToGNodeB=auto1
+ 1218  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1317277,TermPointToGNodeB=auto1
+ 1229  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1317370,TermPointToGNodeB=auto1
+ 1240  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1317459,TermPointToGNodeB=auto1
+ 1251  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1317489,TermPointToGNodeB=auto1
+ 1262  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1317753,TermPointToGNodeB=auto1
+ 1273  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318567,TermPointToGNodeB=auto1
+ 1284  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318570,TermPointToGNodeB=auto1
+ 1295  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318651,TermPointToGNodeB=auto1
+ 1306  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318662,TermPointToGNodeB=auto1
+ 1317  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318688,TermPointToGNodeB=auto1
+ 1328  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318691,TermPointToGNodeB=auto1
+ 1339  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318986,TermPointToGNodeB=auto1
+ 1353  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319266,TermPointToGNodeB=auto1
+ 1364  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319267,TermPointToGNodeB=auto1
+ 1375  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319459,TermPointToGNodeB=auto1
+ 1386  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319579,TermPointToGNodeB=auto1
+ 1397  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319591,TermPointToGNodeB=auto1
+ 1408  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319741,TermPointToGNodeB=auto1
+ 1419  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319742,TermPointToGNodeB=auto1
+ 1427  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319878,TermPointToGNodeB=auto1
+ 1438  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319879,TermPointToGNodeB=auto1
+ 1449  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319891,TermPointToGNodeB=auto1
+ 1457  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319893,TermPointToGNodeB=auto1
+ 1483  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319895,TermPointToGNodeB=auto1
+ 1503  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1320874,TermPointToGNodeB=auto1
+ 1514  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1322800,TermPointToGNodeB=auto1
+ 1525  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1327253,TermPointToGNodeB=auto1
+ 1545  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1328393,TermPointToGNodeB=auto1
+ 1556  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1333434,TermPointToGNodeB=auto1
+ 1570  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1333436,TermPointToGNodeB=auto1
+ 1587  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1336982,TermPointToGNodeB=auto1
+ 1609  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1336983,TermPointToGNodeB=auto1
+ 1626  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1336984,TermPointToGNodeB=auto1
+ 1643  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1336985,TermPointToGNodeB=auto1
+ 1657  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1339599,TermPointToGNodeB=auto1
+ 1674  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1339924,TermPointToGNodeB=auto1
+ 1685  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1341828,TermPointToGNodeB=auto1
+ 1702  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344745,TermPointToGNodeB=auto1
+ 1719  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344747,TermPointToGNodeB=auto1
+ 1736  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344748,TermPointToGNodeB=auto1
+ 1753  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344808,TermPointToGNodeB=auto1
+ 1770  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344901,TermPointToGNodeB=auto1
+ 1790  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344914,TermPointToGNodeB=auto1
+ 1807  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344915,TermPointToGNodeB=auto1
+ 1824  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344918,TermPointToGNodeB=auto1
+ 1841  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345912,TermPointToGNodeB=auto1
+ 1858  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345921,TermPointToGNodeB=auto1
+ 1875  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345936,TermPointToGNodeB=auto1
+ 1886  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345937,TermPointToGNodeB=auto1
+ 1903  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345941,TermPointToGNodeB=auto1
+ 1917  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1346345,TermPointToGNodeB=auto1
+ 1943  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1346346,TermPointToGNodeB=auto1
+ 1963  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1346350,TermPointToGNodeB=auto1
+ 1983  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1346351,TermPointToGNodeB=auto1
+ 2003  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1346352,TermPointToGNodeB=auto1
+ 2023  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347257,TermPointToGNodeB=auto1
+ 2049  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347773,TermPointToGNodeB=auto1
+ 2069  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347965,TermPointToGNodeB=auto1
+ 2089  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347966,TermPointToGNodeB=auto1
+ 2109  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347969,TermPointToGNodeB=auto1
+ 2129  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347970,TermPointToGNodeB=auto1
+ 2149  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347974,TermPointToGNodeB=auto1
+ 2169  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347977,TermPointToGNodeB=auto1
+ 2189  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347978,TermPointToGNodeB=auto1
+ 2209  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348031,TermPointToGNodeB=auto1
+ 2229  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348052,TermPointToGNodeB=auto1
+ 2249  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348087,TermPointToGNodeB=auto1
+ 2269  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348236,TermPointToGNodeB=auto1
+ 2289  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348353,TermPointToGNodeB=auto1
+ 2309  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348356,TermPointToGNodeB=auto1
+ 2329  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349150,TermPointToGNodeB=auto1
+ 2349  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349151,TermPointToGNodeB=auto1
+ 2369  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349154,TermPointToGNodeB=auto1
+ 2389  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349155,TermPointToGNodeB=auto1
+ 2409  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349262,TermPointToGNodeB=auto1
+ 2429  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349363,TermPointToGNodeB=auto1
+ 2449  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349365,TermPointToGNodeB=auto1
+ 2469  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349680,TermPointToGNodeB=auto1
+ 2489  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349689,TermPointToGNodeB=auto1
+ 2509  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349690,TermPointToGNodeB=auto1
+ 2529  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349693,TermPointToGNodeB=auto1
+ 2549  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349694,TermPointToGNodeB=auto1
+ 2569  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349696,TermPointToGNodeB=auto1
+ 2589  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349721,TermPointToGNodeB=auto1
+ 2609  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349722,TermPointToGNodeB=auto1
+ 2629  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349723,TermPointToGNodeB=auto1
+ 2649  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349724,TermPointToGNodeB=auto1
+ 2669  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1350502,TermPointToGNodeB=auto1
+ 2683  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351134,TermPointToGNodeB=auto1
+ 2703  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351164,TermPointToGNodeB=auto1
+ 2723  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351853,TermPointToGNodeB=auto1
+ 2733  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351871,TermPointToGNodeB=auto1
+ 2743  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351872,TermPointToGNodeB=auto1
+ 2763  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1352452,TermPointToGNodeB=auto1
+ 2783  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1352872,TermPointToGNodeB=auto1
+ 2803  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1352873,TermPointToGNodeB=auto1
+ 2823  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353058,TermPointToGNodeB=auto1
+ 2843  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353151,TermPointToGNodeB=auto1
+ 2854  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353330,TermPointToGNodeB=auto1
+ 2865  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353331,TermPointToGNodeB=auto1
+ 2876  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353332,TermPointToGNodeB=auto1
+ 2887  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353333,TermPointToGNodeB=auto1
+ 2901  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353334,TermPointToGNodeB=auto1
+ 2915  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353335,TermPointToGNodeB=auto1
+ 2926  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353337,TermPointToGNodeB=auto1
+ 2937  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353338,TermPointToGNodeB=auto1
+ 2948  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353340,TermPointToGNodeB=auto1
+ 2959  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353342,TermPointToGNodeB=auto1
+ 2970  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353344,TermPointToGNodeB=auto1
+ 2981  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353345,TermPointToGNodeB=auto1
+ 2992  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353346,TermPointToGNodeB=auto1
+ 3003  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353347,TermPointToGNodeB=auto1
+ 3014  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353348,TermPointToGNodeB=auto1
+ 3025  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353350,TermPointToGNodeB=auto1
+ 3036  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353353,TermPointToGNodeB=auto1
+ 3047  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353354,TermPointToGNodeB=auto1
+ 3058  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353356,TermPointToGNodeB=auto1
+ 3069  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353358,TermPointToGNodeB=auto1
+ 3080  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1354085,TermPointToGNodeB=auto1
+ 3088  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1354087,TermPointToGNodeB=auto1
+ 3108  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1354852,TermPointToGNodeB=auto1
+ 3128  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1358200,TermPointToGNodeB=auto1
+ 3148  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1361642,TermPointToGNodeB=auto1
+ 3168  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1363460,TermPointToGNodeB=auto1
+ 3188  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1363868,TermPointToGNodeB=auto1
+ 3208  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1366967,TermPointToGNodeB=auto1
+ 3219  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1367763,TermPointToGNodeB=auto1
+ 3230  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1367765,TermPointToGNodeB=auto1
+ 3241  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1367766,TermPointToGNodeB=auto1
+ 3252  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1367767,TermPointToGNodeB=auto1
+ 3266  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1367768,TermPointToGNodeB=auto1
+ 3274  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1369154,TermPointToGNodeB=auto1
+ 3291  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1369156,TermPointToGNodeB=auto1
+ 3302  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1369366,TermPointToGNodeB=auto1
+ 3322  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1369448,TermPointToGNodeB=auto1
+ 3336  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370075,TermPointToGNodeB=auto1
+ 3350  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370077,TermPointToGNodeB=auto1
+ 3370  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370114,TermPointToGNodeB=auto1
+ 3381  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370316,TermPointToGNodeB=auto1
+ 3395  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1371715,TermPointToGNodeB=auto1
+ 3415  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1372222,TermPointToGNodeB=auto1
+ 3423  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1372224,TermPointToGNodeB=auto1
+ 3434  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1372278,TermPointToGNodeB=auto1
+ 3491  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC1AMF01
+ 3493  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF01
+ 3495  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF02
+ 3497  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE1CMM01
+ 3499  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE3AMF01
+ 3501  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF01
+ 3503  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF02
+ 3505  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH1AMF01
+ 3507  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH2AMF01
+ 3509  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH2AMF02
+ 3511  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH3AMF01
+ 3513  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP1AMF01
+ 3515  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF01
+ 3517  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF02
+ 3519                1 (ENABLED)   GNBCUCPFunction=1,TermPointToGNBDU=1
+ 4390                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1,InterMeLink=1
+ 4391                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1,InterMeLink=2
+ 4501  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,TermPointToGNBCUCP=1
+===================================================================================
+Total: 256 MOs
+
+N2LA8749A> 
+
+N2LA8749A> pr vlanport=
+
+240425-06:00:40-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+===================================================================================
+Proxy  MO
+===================================================================================
+18094  Transport=1,VlanPort=2089
+18095  Transport=1,VlanPort=4001
+18096  Transport=1,VlanPort=ERAN_NR
+===================================================================================
+Total: 3 MOs
+
+N2LA8749A> get address address
+
+240425-06:00:40-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 address           169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 usedAddress       169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 address           169.254.42.43/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 usedAddress       169.254.42.43/32
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             address           11.69.7.10/27
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             addressIPv4Id     1
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             primaryAddress    true
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             usedAddress       11.69.7.10/27
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         address           42.197.6.234/27
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         addressIPv4Id     1
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         primaryAddress    true
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         usedAddress       42.197.6.234/27
+=================================================================================================================
+Total: 4 MOs
+
+
+N2LA8749A> get Address res ENodeB|LTE
+
+240425-06:00:40-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+=================================================================================================================
+Total: 0 MOs
+
+
+N2LA8749A> 
+
+N2LA8749A> enm cmedit get *2LA8749A*
+
+240425-06:00:41-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+
+
+Not allowed to run from amosbatch.
+
+
+N2LA8749A> enm cmedit get *2LA8749A* AddressIPv4.(*) -t
+
+240425-06:00:41-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+
+
+Not allowed to run from amosbatch.
+
+
+N2LA8749A> 
+
+N2LA8749A> hget AddressIPv4 ^address$
+
+240425-06:00:41-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+
+=================================================================================================================
+MO                                                         address         
+=================================================================================================================
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1   169.254.42.43/32
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1                11.69.7.10/27   
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1            42.197.6.234/27 
+=================================================================================================================
+Total: 4 MOs
+
+Added 4 MOs to group: hget_group
+
+N2LA8749A> 
+
+N2LA8749A> pmxz NRCell PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$ -m 10
+
+240425-06:00:41-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+Parsing PM cache: /home/shared/gbadim1/moshell/jarxml/PMCACHE_MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.txt.gz ... Done.
+
+get /rop/A20240425.0200-0215_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0200-0215_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0215-0230_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0215-0230_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0230-0245_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0230-0245_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0245-0300_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0245-0300_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0300-0315_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0300-0315_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0315-0330_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0315-0330_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0330-0345_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0330-0345_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0345-0400_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0345-0400_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0400-0415_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0400-0415_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0415-0430_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0415-0430_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0430-0445_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0430-0445_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0445-0500_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0445-0500_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0500-0515_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0500-0515_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0515-0530_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0515-0530_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0530-0545_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0530-0545_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0545-0600_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0545-0600_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0600-0615_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0600-0615_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0615-0630_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0615-0630_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0630-0645_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0630-0645_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0645-0700_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0645-0700_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0700-0715_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0700-0715_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0715-0730_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0715-0730_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0730-0745_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0730-0745_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0745-0800_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0745-0800_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0800-0815_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0800-0815_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0815-0830_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0815-0830_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0830-0845_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0830-0845_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0845-0900_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0845-0900_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0900-0915_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0900-0915_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0915-0930_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0915-0930_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0930-0945_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0930-0945_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.0945-1000_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0945-1000_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.1000-1015_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1000-1015_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.1015-1030_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1015-1030_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.1030-1045_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1030-1045_N2LA8749A.xml.gz ... OK
+get /rop/A20240425.1045-1100_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1045-1100_N2LA8749A.xml.gz ... OK
+
+(gzip -dc /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0100-0115_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0115-0130_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0130-0145_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0145-0200_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0200-0215_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0215-0230_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0230-0245_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0245-0300_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0300-0315_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0315-0330_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0330-0345_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0345-0400_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0400-0415_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0415-0430_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0430-0445_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0445-0500_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0500-0515_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0515-0530_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0530-0545_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0545-0600_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0600-0615_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0615-0630_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0630-0645_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0645-0700_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0700-0715_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0715-0730_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0730-0745_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0745-0800_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0800-0815_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0815-0830_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0830-0845_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0845-0900_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0900-0915_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0915-0930_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0930-0945_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.0945-1000_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1000-1015_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1015-1030_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1030-1045_N2LA8749A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.7.10/rop/A20240425.1045-1100_N2LA8749A.xml.gz | LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk -vusergawk="LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk" -f /opt/ericsson/amos/moshell/commonjars/pmExtract.awk  "nrcell" "PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$"   | sort | uniq | /usr/bin/perl /opt/ericsson/amos/moshell/pmXtab -q -pval 0 -mom /var/tmp/20240425-060001_3583132/pmxmomLog3583327  -cols time -fmt txt -m "[M]anagedElement=[^,]+,(?:\w+=1,){0,1}((\w+=[^,]+,*)+$)"  )2>&1 | tee -a /home/shared/common/Overnight_Work/Rehomes/Postchecks/N2LA8749A_240425-0600.log
+
+Report from 2024-04-25 01:00 UTC to 2024-04-25 10:59 UTC (40 ropfiles)
+Node SW: CXP2010174/1_R82C53 (23.Q4.0-3)
+
+Date: 2024-04-24, 2024-04-25
+Object               Counter            20:00  20:15  20:30  20:45  21:00  21:15  21:30  21:45  22:00  22:15  22:30  22:45  23:00  23:15  23:30  23:45  00:00  00:15  00:30  00:45  01:00  01:15  01:30  01:45  02:00  02:15  02:30  02:45  03:00  03:15  03:30  03:45  04:00  04:15  04:30  04:45  05:00  05:15  05:30  05:45
+NRCellCU=A2LA8749A11 pmEndcSetupUeAtt    1557   1578   1064   1677   1099   2088   2052   1681   1801   2132   1920   2105   3013    443   1310   1955   1937   1857   2347   1487   1341   1513   1519   1657   1341   1637   1661   1491   1418   1665   1580   1226   1147   1259   1343   1469   1614   1469   1397   1247
+NRCellCU=A2LA8749A11 pmEndcSetupUeSucc   1554   1577   1064   1677   1099   2088   2052   1680   1801   2132   1919   2105   3013    440   1310   1955   1937   1857   2347   1486   1341   1513   1519   1657   1341   1637   1661   1491   1418   1665   1580   1226   1147   1259   1343   1469   1614   1469   1397   1247
+NRCellCU=A2LA8749A12 pmEndcSetupUeAtt     899   1328   1013    781   1314   1366    980   1001    993    961    901   1024   1016    216    607   1034   1676   1015    727   1006    988    960    638    616    485    478    555    559    523    561    610    668    588    697    633    595    946    962    871    850
+NRCellCU=A2LA8749A12 pmEndcSetupUeSucc    899   1327   1013    781   1314   1366    980   1001    993    961    901   1024   1016    212    607   1032   1676   1014    726   1006    988    960    638    616    485    478    555    559    523    561    610    668    587    697    633    595    946    962    871    850
+NRCellCU=A2LA8749A21 pmEndcSetupUeAtt    1540   1518   2450   1430   1515   1509   1831   1736   1680   1707   1527   1368   1569    320   1253   1602   1583   1599   1549   1602   1646   1548   1657   1532   1531   1430   1573   1575   1831   1750   1742   1655   1554   1505   1493   1520   1593   1586   1811   1925
+NRCellCU=A2LA8749A21 pmEndcSetupUeSucc   1540   1517   2448   1430   1515   1509   1831   1735   1679   1707   1527   1366   1569    316   1253   1602   1583   1599   1549   1602   1646   1548   1657   1532   1531   1430   1573   1575   1831   1750   1742   1655   1554   1504   1493   1519   1593   1584   1811   1924
+NRCellCU=A2LA8749A22 pmEndcSetupUeAtt     693    565    863    892    625    641    609    645    789   1033    630    689    629    105    506    546    348    355    763    729   1226    824    723    476    723    499    472    498    481    410    429    543    388    331    430    366    587    611    691    790
+NRCellCU=A2LA8749A22 pmEndcSetupUeSucc    692    565    863    892    625    641    609    645    789   1033    627    688    629    103    505    546    348    355    763    729   1226    824    723    476    723    499    472    498    481    410    429    543    388    331    430    366    587    611    691    790
+NRCellCU=A2LA8749A31 pmEndcSetupUeAtt     435    555    487    558    479    451    428    504    564    450    529    511    438    124    469    439    367    383    411    348    374    380    467    572    485    458    425    440    443    436    469    527    522    537    529    498    465    481    487    449
+NRCellCU=A2LA8749A31 pmEndcSetupUeSucc    435    555    487    558    479    451    428    502    563    450    529    511    438    121    469    439    367    383    411    348    374    380    467    572    485    458    425    440    443    436    469    527    522    537    529    498    465    481    485    449
+NRCellCU=A2LA8749A32 pmEndcSetupUeAtt     251    201    217    271    407    272    225    196    205    190    195    222    304     39    296    228    139    126    152    135    148    177    453    219    210    192    215    192    191    288    214    197    209    193    351    519    402    254    264    275
+NRCellCU=A2LA8749A32 pmEndcSetupUeSucc    251    201    216    271    407    272    225    195    205    190    195    222    304     38    296    227    139    126    151    135    148    177    453    219    210    192    215    192    191    288    214    197    209    193    351    519    402    254    264    275
+
+
+N2LA8749A> ue print -admitted
+Checking available boards on node...
+
+Collecting RCS board data ...
+
+240425-06:01:31-0500 11.69.7.10 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3583327
+coli>/lrat/ue print -admitted
+coli>/rc/nrat/ue print -admitted
+NrNrDc: uehId:4 ues:0
+NrNrDc: uehId:5 ues:0
+NrNrDc: uehId:6 ues:0
+NrNrDc: uehId:7 ues:0
+NrEnDc: uehId:4 ues:57
+NrEnDc: uehId:5 ues:61
+NrEnDc: uehId:6 ues:47
+NrEnDc: uehId:7 ues:49
+Nr: uehId:4 ues:14
+Nr: uehId:5 ues:9
+Nr: uehId:6 ues:13
+Nr: uehId:7 ues:15
+coli>/rpc/nrat/ue print -admitted
+uehId:6 ues:0
+uehId:7 ues:71
+uehId:8 ues:69
+uehId:9 ues:59
+uehId:10 ues:63
+coli>
+
+N2LA8749A> 
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> #		 Post Script CV and unset of all variables - This is modifiable to your needs      #
+
+N2LA8749A> ############################################################################################
+
+N2LA8749A> 
+
+N2LA8749A> 
+
+Log close: 240425-060133 - /home/shared/common/Overnight_Work/Rehomes/Postchecks/N2LA8749A_240425-0600.log

@@ -1,0 +1,19 @@
+
+Full command = /opt/ericsson/amos/moshell/mobatch /home/shared/common/Overnight_Work/Rehomes/sitelist /home/shared/common/Overnight_Work/Rehomes/Rehome_Postchecks '/home/shared/common/Overnight_Work/Rehomes/Postchecks'
+Sitefile = /home/shared/common/Overnight_Work/Rehomes/sitelist. Number of sites = 0
+Command file = /home/shared/common/Overnight_Work/Rehomes/Rehome_Postchecks
+Timeout set to 30 minutes (default value)
+Wait interval set to 2.5 seconds
+Maximum number of parallel processes set to 10 (default value)
+
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Postchecks
+
+###########################################################################################
+>>>>> STARTED (pid)
+** FINISHED (result)              STATUS (started, finished, queue, running, sites running)
+###########################################################################################
+###########################################################################################
+
+
+Total mobatch duration: 0m1s
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Postchecks

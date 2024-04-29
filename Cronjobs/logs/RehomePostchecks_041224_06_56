@@ -1,0 +1,29 @@
+
+Full command = /opt/ericsson/amos/moshell/mobatch /home/shared/common/Overnight_Work/Rehomes/sitelist /home/shared/common/Overnight_Work/Rehomes/Rehome_Postchecks '/home/shared/common/Overnight_Work/Rehomes/Postchecks'
+Sitefile = /home/shared/common/Overnight_Work/Rehomes/sitelist. Number of sites = 3
+Command file = /home/shared/common/Overnight_Work/Rehomes/Rehome_Postchecks
+Timeout set to 30 minutes (default value)
+Wait interval set to 2.5 seconds
+Maximum number of parallel processes set to 10 (default value)
+
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Postchecks
+
+###########################################################################################
+>>>>> STARTED (pid)
+** FINISHED (result)              STATUS (started, finished, queue, running, sites running)
+###########################################################################################
+>>>>> M1CE8044A (369682)           1s  0f  2q  1r: M1CE8044A 
+>>>>> M1CE8044A2 (369683)          2s  0f  1q  2r: M1CE8044A M1CE8044A2 
+>>>>> M1CE8044A3 (369684)          3s  0f  0q  3r: M1CE8044A M1CE8044A2 M1CE8044A3 
+** M1CE8044A (OK)                  3s  1f  0q  2r: M1CE8044A2 M1CE8044A3 
+** M1CE8044A2 (OK)                 3s  2f  0q  1r: M1CE8044A3 
+** M1CE8044A3 (OK)                 3s  3f  0q  0r: 
+###########################################################################################
+
+OK            1m12s   M1CE8044A
+OK            1m25s   M1CE8044A2
+OK            1m47s   M1CE8044A3
+
+Total mobatch duration: 1m48s
+Average duration per site with status OK: 1m28s
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Postchecks

@@ -1,0 +1,26 @@
+
+Full command = /opt/ericsson/amos/moshell/mobatch /home/shared/common/Overnight_Work/Rehomes/sitelist /home/shared/common/Overnight_Work/Rehomes/Rehome_Prechecks /home/shared/common/Overnight_Work/Rehomes/Prechecks
+Sitefile = /home/shared/common/Overnight_Work/Rehomes/sitelist. Number of sites = 2
+Command file = /home/shared/common/Overnight_Work/Rehomes/Rehome_Prechecks
+Timeout set to 30 minutes (default value)
+Wait interval set to 2.5 seconds
+Maximum number of parallel processes set to 10 (default value)
+
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Prechecks
+
+###########################################################################################
+>>>>> STARTED (pid)
+** FINISHED (result)              STATUS (started, finished, queue, running, sites running)
+###########################################################################################
+>>>>> M2LA8749A (2384171)          1s  0f  1q  1r: M2LA8749A 
+>>>>> N2LA8749A (2384174)          2s  0f  0q  2r: M2LA8749A N2LA8749A 
+** N2LA8749A (OK)                  2s  1f  0q  1r: M2LA8749A 
+** M2LA8749A (OK)                  2s  2f  0q  0r: 
+###########################################################################################
+
+OK            2m3s    M2LA8749A
+OK            1m18s   N2LA8749A
+
+Total mobatch duration: 2m3s
+Average duration per site with status OK: 1m40s
+Logfiles stored in /home/shared/common/Overnight_Work/Rehomes/Prechecks

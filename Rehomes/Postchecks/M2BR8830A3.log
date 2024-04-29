@@ -1,0 +1,611 @@
+Logging to file /home/shared/common/Overnight_Work/Rehomes/Postchecks/M2BR8830A3.log
+                        __  __  ____   _____
+                  /\   |  \/  |/ __ \ / ____|
+                 /  \  | \  / | |  | | (___  
+                / /\ \ | |\/| | |  | |\___ \ 
+               / ____ \| |  | | |__| |____) |
+              /_/    \_\_|  |_|\____/|_____/
+              OSS Framework for MoShell-24.0c 
+  Copyright (c) Ericsson AB 2001-2024 - All Rights Reserved
+              
+           
+$amosrb_pid = 1796285
+
+Checking ip contact...OK
+
+HELP MENU            : h
+BASIC MO COMMANDS    : m
+OTHER MO COMMANDS    : n
+OTHER COMMANDS       : o
+PM COMMANDS          : p
+QUIT                 : q
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> #				Script Foundation - Leave this for all scripts							   #
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> 
+
+M2BR8830A3> confb+
+
+M2BR8830A3> gs+
+
+Perform a get before set = enabled
+
+M2BR8830A3> unset all
+
+M2BR8830A3> l+
+
+Logging to file: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240424-060009_M2BR8830A3.log
+
+M2BR8830A3> 
+
+M2BR8830A3> alt
+
+240424-06:00:09-0500 11.69.144.244 24.0c  stopfile=/tmp/1795464
+Looking up temporary_amos account... OK.
+Trying temporary_amos_gbadim1_291's password from amos lookupAccount ... OK
+
+$ssh_pid = 1797777
+
+Connected to 11.69.144.244 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M2BR8830A3,ManagedElement=M2BR8830A3)
+
+Checking MOM version...MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9
+Parsing MOM (cached): /var/tmp/20240424-060002_1795056/MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.xml.cache.gz ...........................................................................................................................................................................................................Done.
+Using paramfile /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q4.txt
+Parsing file /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q4.txt ...................................................................................Done.
+Using imomdfile /opt/ericsson/amos/moshell/commonjars/pm/IMOMD_MSRBS_22.Q4.txt
+Using imomfile /opt/ericsson/amos/moshell/commonjars/pm/IMOM_MSRBS_23.Q4.txt
+
+Collecting Alarms...
+
+====================================================================================================================
+Date & Time (UTC)   S Specific Problem                    MO (AdditionalText/PC, AI)
+====================================================================================================================
+2024-04-24 03:35:08 m External Link to GNodeB Failure     ENodeBFunction=1 (X2 link problem to one or several neighbouring gNodeBs. AI: PLMN ID-gNB ID 1 : 310260-1370833,PLMN ID-gNB ID 2 : 310260-1359527,PLMN ID-gNB ID 3 : 310260-1354754,PLMN ID-gNB ID 4 : 310260-1349458,PLMN ID-gNB ID 5 : 310260-1347217,PLMN ID-gNB ID 6 : 310260-1345913,PLMN ID-gNB ID 7 : 310260-1343066,PLMN ID-gNB ID 8 : 310260-1342890,PLMN ID-gNB ID 9 : 310260-1338500,PLMN ID-gNB ID : list truncated)
+>>> Total: 1 Alarms (0 Critical, 0 Major)
+
+M2BR8830A3> 
+
+M2BR8830A3> uv sls_username > $user
+
+sls_username              = gbadim1
+
+$user = gbadim1
+
+M2BR8830A3> $date = `date +%y%m%d-%H%M`
+
+$date = 240424-0600
+
+M2BR8830A3> $Node = `echo "$nodename" | cut -c 2-9`
+
+$Node = 2BR8830A
+
+M2BR8830A3> $L21 = L
+
+$L21 = L
+
+M2BR8830A3> $L19 = B
+
+$L19 = B
+
+M2BR8830A3> $L7 = D
+
+$L7 = D
+
+M2BR8830A3> $L6 = E
+
+$L6 = E
+
+M2BR8830A3> $N6 = K
+
+$N6 = K
+
+M2BR8830A3> $N25 = A
+
+$N25 = A
+
+M2BR8830A3> $L25 = T
+
+$L25 = T
+
+M2BR8830A3> $N19 = J
+
+$N19 = J
+
+M2BR8830A3> $N71 = K
+
+$N71 = K
+
+M2BR8830A3> $2C = .*2$
+
+$2C = .*2$
+
+M2BR8830A3> $1C = .*1$
+
+$1C = .*1$
+
+M2BR8830A3> $allcell = TDD|FDD|NRCellDU|Nbiot
+
+$allcell = TDD|FDD|NRCellDU|Nbiot
+
+M2BR8830A3> $FDD = EUtranCellFDD=
+
+$FDD = EUtranCellFDD=
+
+M2BR8830A3> $TDD = EUtranCellTDD=
+
+$TDD = EUtranCellTDD=
+
+M2BR8830A3> $NRCell = NRCellDU=
+
+$NRCell = NRCellDU=
+
+M2BR8830A3> $NRSec25 = NRSectorCarrier=25-
+
+$NRSec25 = NRSectorCarrier=25-
+
+M2BR8830A3> $NRSec6 = NRSectorCarrier=6-
+
+$NRSec6 = NRSectorCarrier=6-
+
+M2BR8830A3> $NRSec19 = NRSectorCarrier=19-
+
+$NRSec19 = NRSectorCarrier=19-
+
+M2BR8830A3> $LTESec = SectorEquipmentFunction=
+
+$LTESec = SectorEquipmentFunction=
+
+M2BR8830A3> 
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> #		Change JobName and any parameter that needs changing case by case basis    		   #
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> # 		PUT A # SIGN IN FRONT OF ANYTHING YOU DONT WANT TO USE ON THIS SCRIPT  			   #   
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3>       
+
+M2BR8830A3> #$arfcnDL = 507708
+
+M2BR8830A3> #$jobname = Retune_Prechecks
+
+M2BR8830A3> 
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> #				Script Specifics - This is modifiable to your needs						   #
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> #	   FOR SETM COMMANDS YOU HAVE TO REMOVE THE GS+ AND GS- from the script                #
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> ###############################
+
+M2BR8830A3> #### PRECHECK / LOCK / CV #####
+
+M2BR8830A3> ###############################
+
+M2BR8830A3> 
+
+M2BR8830A3> 
+
+M2BR8830A3> lt all
+
+240424-06:00:19-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+Connected to 11.69.144.244 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M2BR8830A3,ManagedElement=M2BR8830A3)
+
+Last MO: 20659. Loaded 20659 MOs. Total: 20660 MOs.
+
+M2BR8830A3> pr vlanport=
+
+240424-06:00:26-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+===================================================================================
+Proxy  MO
+===================================================================================
+20655  Transport=1,VlanPort=1084
+20656  Transport=1,VlanPort=3084
+20657  Transport=1,VlanPort=4001
+20658  Transport=1,VlanPort=ERAN
+20659  Transport=1,VlanPort=ERAN_NR
+===================================================================================
+Total: 5 MOs
+
+M2BR8830A3> get address address
+
+240424-06:00:26-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                address           42.197.144.244/27
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                addressIPv4Id     1
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                primaryAddress    true
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                usedAddress       42.197.144.244/27
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 address           169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 usedAddress       169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 address           169.254.42.43/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 usedAddress       169.254.42.43/32
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             address           11.69.144.244/27
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             addressIPv4Id     1
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             primaryAddress    true
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             usedAddress       11.69.144.244/27
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         address           42.197.144.252/27
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         addressIPv4Id     1
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         primaryAddress    true
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         usedAddress       42.197.144.252/27
+=================================================================================================================
+Total: 5 MOs
+
+
+M2BR8830A3> st FDD|TDD|NRCellDU|NbIot
+
+240424-06:00:27-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+   44  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=B2BR8830A11
+  151  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=B2BR8830A21
+  265  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=B2BR8830A31
+  368  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=L2BR8830A11
+  467  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=L2BR8830A21
+  582  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=L2BR8830A31
+  977  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,NbIotCell=Z2BR8830A11
+  978  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,NbIotCell=Z2BR8830A21
+  979  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,NbIotCell=Z2BR8830A31
+ 2638  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=J2BR8830A11
+ 2641  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=J2BR8830A21
+ 2644  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=J2BR8830A31
+ 3226  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllRssiNpuschReadings
+ 3227  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllSinrNpuschReadings
+ 3228  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllStatus
+===================================================================================
+Total: 15 MOs
+
+M2BR8830A3> 
+
+M2BR8830A3> st termpointtognb=1
+
+240424-06:00:27-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+===================================================================================
+Total: 0 MOs
+
+M2BR8830A3> get ^GNB.*=1 gNBId$
+
+240424-06:00:27-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+GNBCUCPFunction=1                                       gNBId             1371913
+GNBCUUPFunction=1                                       gNBId             1371913
+GNBDUFunction=1                                         gNBId             1371913
+=================================================================================================================
+Total: 3 MOs
+
+
+M2BR8830A3> get FUnction=1 nbid$
+
+240424-06:00:28-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+ENodeBFunction=1                                        eNBId             54473
+GNBCUCPFunction=1                                       gNBId             1371913
+GNBCUUPFunction=1                                       gNBId             1371913
+GNBDUFunction=1                                         gNBId             1371913
+ExtGNBDUPartnerFunction=1314607                         gNBId             1314607
+ExtGNBDUPartnerFunction=1371957                         gNBId             1371957
+=================================================================================================================
+Total: 6 MOs
+
+
+M2BR8830A3> st term
+
+240424-06:00:28-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+  710  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-109117,TermPointToENB=310260-109117
+  716  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-139077,TermPointToENB=310260-139077
+  719                1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-139191,EranInterMeLink=1
+  725  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-139191,TermPointToENB=310260-139191
+  728  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-139208,TermPointToENB=310260-139208
+  733  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-139728,TermPointToENB=310260-139728
+  737  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-140110,TermPointToENB=310260-140110
+  742  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-310557,TermPointToENB=310260-310557
+  748  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-435936,TermPointToENB=310260-435936
+  757  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-435938,TermPointToENB=310260-435938
+  766  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-54484,TermPointToENB=310260-54484
+  772  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-54775,TermPointToENB=310260-54775
+  777  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-57480,TermPointToENB=310260-57480
+  781  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-58688,TermPointToENB=310260-58688
+  784  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-58692,TermPointToENB=310260-58692
+  788  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-58697,TermPointToENB=310260-58697
+  792  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-59399,TermPointToENB=310260-59399
+  800  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-59540,TermPointToENB=310260-59540
+  807  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-878193,TermPointToENB=310260-878193
+  809  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-878697,TermPointToENB=310260-878697
+  812  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-878933,TermPointToENB=310260-878933
+  815  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-890798,TermPointToENB=310260-890798
+  818  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-890800,TermPointToENB=310260-890800
+  855  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001075977,TermPointToGNB=310260-000000001075977
+  858  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001086310,TermPointToGNB=310260-000000001086310
+  869  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001088747,TermPointToGNB=310260-000000001088747
+  874  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001314607,TermPointToGNB=310260-000000001314607
+  877  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001315842,TermPointToGNB=310260-000000001315842
+  881  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001316077,TermPointToGNB=310260-000000001316077
+  886  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001316231,TermPointToGNB=310260-000000001316231
+  890  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001316354,TermPointToGNB=310260-000000001316354
+  894  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001316882,TermPointToGNB=310260-000000001316882
+  898  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001316888,TermPointToGNB=310260-000000001316888
+  902  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001329025,TermPointToGNB=310260-000000001329025
+  905  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001332418,TermPointToGNB=310260-000000001332418
+  909  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001335566,TermPointToGNB=310260-000000001335566
+  912  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001335632,TermPointToGNB=310260-000000001335632
+  915  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001338500,TermPointToGNB=310260-000000001338500
+  918  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001342890,TermPointToGNB=310260-000000001342890
+  922  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001343066,TermPointToGNB=310260-000000001343066
+  925  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001345913,TermPointToGNB=310260-000000001345913
+  928  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001347217,TermPointToGNB=310260-000000001347217
+  931  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001348576,TermPointToGNB=310260-000000001348576
+  934  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001349458,TermPointToGNB=310260-000000001349458
+  937  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001354754,TermPointToGNB=310260-000000001354754
+  941  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001359527,TermPointToGNB=310260-000000001359527
+  946  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001370833,TermPointToGNB=310260-000000001370833
+  960  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=310260-000000001371957,TermPointToGNB=310260-000000001371957
+ 1112  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=CR1vMME1
+ 1113  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC1vMME1
+ 1114  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC1vMME2
+ 1115  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC2vMME1
+ 1116  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1CMM01
+ 1117  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1vMME1
+ 1118  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1vMME2
+ 1119  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE4vMME1
+ 1120  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH1vMME1
+ 1121  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH2vMME1
+ 1122  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=PH3vMME1
+ 1123  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP1vMME1
+ 1124  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP2nMME1
+ 1125  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP2vMME1
+ 1829  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1075977,TermPointToGNodeB=auto1
+ 1843  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1075983,TermPointToGNodeB=auto1
+ 1863  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1081627,TermPointToGNodeB=auto1
+ 1883  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1088747,TermPointToGNodeB=auto1
+ 1894  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1314607,TermPointToGNodeB=auto1
+ 1905  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316231,TermPointToGNodeB=auto1
+ 1916  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316354,TermPointToGNodeB=auto1
+ 1927  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316882,TermPointToGNodeB=auto1
+ 1938  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316888,TermPointToGNodeB=auto1
+ 1955  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1338500,TermPointToGNodeB=auto1
+ 1966  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345913,TermPointToGNodeB=auto1
+ 1986  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349459,TermPointToGNodeB=auto1
+ 2012  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1354754,TermPointToGNodeB=auto1
+ 2041  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1359527,TermPointToGNodeB=auto1
+ 2058  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1366349,TermPointToGNodeB=auto1
+ 2075  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1366401,TermPointToGNodeB=auto1
+ 2086  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1369160,TermPointToGNodeB=auto1
+ 2106  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1369605,TermPointToGNodeB=auto1
+ 2128  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370080,TermPointToGNodeB=auto1
+ 2142  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370833,TermPointToGNodeB=auto1
+ 2168  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370838,TermPointToGNodeB=auto1
+ 2188  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1371335,TermPointToGNodeB=auto1
+ 2208  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1371957,TermPointToGNodeB=auto1
+ 2258  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC1AMF01
+ 2260  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF01
+ 2262  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF02
+ 2264  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE1CMM01
+ 2266  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE3AMF01
+ 2268  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF01
+ 2270  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF02
+ 2272  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH1AMF01
+ 2274  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH2AMF01
+ 2276  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH2AMF02
+ 2278  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH3AMF01
+ 2280  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP1AMF01
+ 2282  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF01
+ 2284  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF02
+ 2286                1 (ENABLED)   GNBCUCPFunction=1,TermPointToGNBDU=1
+ 2632                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1314607,InterMeLink=1
+ 2633                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1314607,InterMeLink=2
+ 2635                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1371957,InterMeLink=1
+ 2636                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1371957,InterMeLink=2
+ 2726  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,TermPointToGNBCUCP=1
+===================================================================================
+Total: 105 MOs
+
+M2BR8830A3> 
+
+M2BR8830A3> enm cmedit get *$Node* 
+
+240424-06:00:33-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+
+
+Not allowed to run from amosbatch.
+
+
+M2BR8830A3> enm cmedit get *$Node* AddressIPv4.(*) -t
+
+240424-06:00:33-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+
+
+Not allowed to run from amosbatch.
+
+
+M2BR8830A3> 
+
+M2BR8830A3> hget AddressIPv4 ^address$
+
+240424-06:00:33-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+.
+=================================================================================================================
+MO                                                         address          
+=================================================================================================================
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                   42.197.144.244/27
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 169.254.42.42/32 
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1   169.254.42.43/32 
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1                11.69.144.244/27 
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1            42.197.144.252/27
+=================================================================================================================
+Total: 5 MOs
+
+Added 5 MOs to group: hget_group
+
+M2BR8830A3> 
+
+M2BR8830A3> pmxz NRCell PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$ -m 10
+
+240424-06:00:34-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+Parsing PM cache: /home/shared/gbadim1/moshell/jarxml/PMCACHE_MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.txt.gz ... Done.
+
+.....................
+get /rop/A20240424.0030-0045_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0030-0045_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0045-0100_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0045-0100_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0100-0115_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0100-0115_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0115-0130_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0115-0130_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0130-0145_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0130-0145_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0145-0200_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0145-0200_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0200-0215_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0200-0215_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0215-0230_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0215-0230_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0230-0245_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0230-0245_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0245-0300_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0245-0300_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0300-0315_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0300-0315_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0330-0345_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0330-0345_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0345-0400_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0345-0400_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0400-0415_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0400-0415_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0415-0430_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0415-0430_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0430-0445_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0430-0445_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0445-0500_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0445-0500_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0500-0515_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0500-0515_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0515-0530_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0515-0530_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0530-0545_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0530-0545_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0545-0600_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0545-0600_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0600-0615_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0600-0615_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0615-0630_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0615-0630_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0630-0645_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0630-0645_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0645-0700_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0645-0700_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0700-0715_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0700-0715_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0715-0730_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0715-0730_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0730-0745_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0730-0745_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0745-0800_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0745-0800_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0800-0815_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0800-0815_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0815-0830_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0815-0830_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0830-0845_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0830-0845_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0845-0900_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0845-0900_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0900-0915_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0900-0915_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0915-0930_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0915-0930_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0930-0945_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0930-0945_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.0945-1000_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0945-1000_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.1000-1015_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1000-1015_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.1015-1030_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1015-1030_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.1030-1045_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1030-1045_M2BR8830A3.xml.gz ... OK
+get /rop/A20240424.1045-1100_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1045-1100_M2BR8830A3.xml.gz ... OK
+
+(gzip -dc /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0100-0115_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0115-0130_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0130-0145_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0145-0200_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0200-0215_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0215-0230_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0230-0245_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0245-0300_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0300-0315_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0330-0345_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0345-0400_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0400-0415_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0415-0430_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0430-0445_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0445-0500_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0500-0515_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0515-0530_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0530-0545_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0545-0600_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0600-0615_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0615-0630_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0630-0645_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0645-0700_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0700-0715_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0715-0730_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0730-0745_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0745-0800_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0800-0815_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0815-0830_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0830-0845_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0845-0900_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0900-0915_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0915-0930_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0930-0945_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.0945-1000_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1000-1015_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1015-1030_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1030-1045_M2BR8830A3.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.144.244/rop/A20240424.1045-1100_M2BR8830A3.xml.gz | LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk -vusergawk="LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk" -f /opt/ericsson/amos/moshell/commonjars/pmExtract.awk  "nrcell" "PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$"   | sort | uniq | /usr/bin/perl /opt/ericsson/amos/moshell/pmXtab -q -pval 0 -mom /var/tmp/20240424-060002_1795056/pmxmomLog1795464  -cols time -fmt txt -m "[M]anagedElement=[^,]+,(?:\w+=1,){0,1}((\w+=[^,]+,*)+$)"  )2>&1 | tee -a /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240424-060009_M2BR8830A3.log
+
+Report from 2024-04-24 01:00 UTC to 2024-04-24 10:59 UTC (39 ropfiles)
+Node SW: CXP2010174/1_R82C53 (23.Q4.0-3)
+
+Date: 2024-04-23, 2024-04-24
+Object               Counter            20:00  20:15  20:30  20:45  21:00  21:15  21:30  21:45  22:00  22:30  22:45  23:00  23:15  23:30  23:45  00:00  00:15  00:30  00:45  01:00  01:15  01:30  01:45  02:00  02:15  02:30  02:45  03:00  03:15  03:30  03:45  04:00  04:15  04:30  04:45  05:00  05:15  05:30  05:45
+NRCellCU=J2BR8830A11 pmEndcSetupUeAtt       0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+NRCellCU=J2BR8830A11 pmEndcSetupUeSucc      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+NRCellCU=J2BR8830A21 pmEndcSetupUeAtt       0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+NRCellCU=J2BR8830A21 pmEndcSetupUeSucc      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+NRCellCU=J2BR8830A31 pmEndcSetupUeAtt       0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+NRCellCU=J2BR8830A31 pmEndcSetupUeSucc      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0
+
+
+M2BR8830A3> ue print -admitted
+Checking available boards on node...
+
+Collecting RCS board data ...
+.......................................................................
+..................
+.....
+240424-06:01:44-0500 11.69.144.244 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/1795464
+coli>/lrat/ue print -admitted
+CellId  #UE:s  #Bearers  
+   1       7       10
+   2       3        4
+   3       7        7
+   7      11       18
+   8       6        8
+   9       4        6
+ 200       0        0
+ 201       0        0
+ 202       0        0
+coli>/rc/nrat/ue print -admitted
+NrEnDc: uehId:4 ues:0
+NrEnDc: uehId:5 ues:0
+NrEnDc: uehId:6 ues:0
+NrEnDc: uehId:7 ues:0
+NrNrDc: uehId:4 ues:0
+NrNrDc: uehId:5 ues:0
+NrNrDc: uehId:6 ues:0
+NrNrDc: uehId:7 ues:0
+Nr: uehId:4 ues:0
+Nr: uehId:5 ues:1
+Nr: uehId:6 ues:0
+Nr: uehId:7 ues:1
+coli>/rpc/nrat/ue print -admitted
+uehId:6 ues:0
+uehId:7 ues:0
+uehId:8 ues:1
+uehId:9 ues:0
+uehId:10 ues:1
+coli>
+
+M2BR8830A3> 
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> #		 Post Script CV and unset of all variables - This is modifiable to your needs      #
+
+M2BR8830A3> ############################################################################################
+
+M2BR8830A3> 
+
+M2BR8830A3> 
+
+M2BR8830A3> l-
+
+Log close: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240424-060009_M2BR8830A3.log
+
+M2BR8830A3> confb-
+
+M2BR8830A3> gs-
+
+Perform a get before set = disabled
+
+M2BR8830A3> 
+
+M2BR8830A3> 
+
+M2BR8830A3> #cvms post_$jobname_$date
+
+M2BR8830A3> 
+
+M2BR8830A3> #Keep the unset all after the cv so the variables can be used
+
+M2BR8830A3> unset all 
+
+M2BR8830A3> 
+
+M2BR8830A3> #cmedit set NetworkElement=M7BAN764A,ComConnectivityInformation=1 ipAddress=11.242.0.98#
+Bye...
+Output has been logged to file /home/shared/common/Overnight_Work/Rehomes/Postchecks/M2BR8830A3.log

@@ -1,0 +1,1 @@
+/opt/ericsson/amos/bin/mobatch /home/shared/common/Overnight_Work/Rehomes/sitelist /home/shared/common/Overnight_Work/Rehomes/Rehome_Postchecks

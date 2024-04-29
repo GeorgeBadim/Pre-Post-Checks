@@ -1,0 +1,2 @@
+run /home/shared/common/Overnight_Work/Cronjobs/Del_Mobatch_File.sh
+/opt/ericsson/amos/bin/mobatch /home/shared/common/Overnight_Work/Rehomes/sitelist /home/shared/common/Overnight_Work/Rehomes/Rehome_Prechecks

@@ -1,0 +1,648 @@
+Logging to file /home/shared/common/Overnight_Work/Rehomes/Postchecks//M1CE8044A2.log
+                        __  __  ____   _____
+                  /\   |  \/  |/ __ \ / ____|
+                 /  \  | \  / | |  | | (___  
+                / /\ \ | |\/| | |  | |\___ \ 
+               / ____ \| |  | | |__| |____) |
+              /_/    \_\_|  |_|\____/|_____/
+              OSS Framework for MoShell-23.0n 
+  Copyright (c) Ericsson AB 2001-2023 - All Rights Reserved
+              
+           
+[1;31mWARNING: [0mthe AMOS version currently running is more than 24 weeks old and is unsupported.
+Please upgrade as soon as possible to the latest released version, available from your local Ericsson support.
+
+$amosrb_pid = 2855392
+
+Checking ip contact...OK
+
+HELP MENU            : h
+BASIC MO COMMANDS    : m
+OTHER MO COMMANDS    : n
+OTHER COMMANDS       : o
+PM COMMANDS          : p
+QUIT                 : q
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> #				Script Foundation - Leave this for all scripts							   #
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> 
+
+M1CE8044A2> confb+
+
+M1CE8044A2> gs+
+
+Perform a get before set = enabled
+
+M1CE8044A2> unset all
+
+M1CE8044A2> l+
+
+Logging to file: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240412-125819_M1CE8044A2.log
+
+M1CE8044A2> 
+
+M1CE8044A2> alt
+
+240412-12:58:19-0500 11.69.207.171 23.0n  stopfile=/tmp/2855213
+Looking up temporary_amos account... OK.
+Trying temporary_amos_gbadim1_112's password from amos lookupAccount ... OK
+
+$ssh_pid = 2855883
+
+Connected to 11.69.207.171 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2)
+
+Checking MOM version...MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9
+Parsing MOM (cached): /var/tmp/20240412-125816_2855066/MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.xml.cache.gz ...........................................................................................................................................................................................................Done.
+Using paramfile /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q2.txt
+Parsing file /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q2.txt ...............................................................................Done.
+Using imomdfile /opt/ericsson/amos/moshell/commonjars/pm/IMOMD_MSRBS_22.Q4.txt
+Using imomfile /opt/ericsson/amos/moshell/commonjars/pm/IMOM_MSRBS_23.Q3.txt
+
+Collecting Alarms...
+
+====================================================================================================================
+Date & Time (UTC)   S Specific Problem                    MO (Cause/AdditionalInfo)
+====================================================================================================================
+>>> Total: 0 Alarms (0 Critical, 0 Major)
+
+M1CE8044A2> 
+
+M1CE8044A2> uv sls_username > $user
+
+sls_username              = gbadim1
+
+$user = gbadim1
+
+M1CE8044A2> $date = `date +%y%m%d-%H%M`
+
+$date = 240412-1258
+
+M1CE8044A2> $Node = `echo "$nodename" | cut -c 2-9`
+
+$Node = 1CE8044A
+
+M1CE8044A2> $L21 = L
+
+$L21 = L
+
+M1CE8044A2> $L19 = B
+
+$L19 = B
+
+M1CE8044A2> $L7 = D
+
+$L7 = D
+
+M1CE8044A2> $L6 = E
+
+$L6 = E
+
+M1CE8044A2> $N6 = K
+
+$N6 = K
+
+M1CE8044A2> $N25 = A
+
+$N25 = A
+
+M1CE8044A2> $L25 = T
+
+$L25 = T
+
+M1CE8044A2> $N19 = J
+
+$N19 = J
+
+M1CE8044A2> $N71 = K
+
+$N71 = K
+
+M1CE8044A2> $2C = .*2$
+
+$2C = .*2$
+
+M1CE8044A2> $1C = .*1$
+
+$1C = .*1$
+
+M1CE8044A2> $allcell = TDD|FDD|NRCellDU|Nbiot
+
+$allcell = TDD|FDD|NRCellDU|Nbiot
+
+M1CE8044A2> $FDD = EUtranCellFDD=
+
+$FDD = EUtranCellFDD=
+
+M1CE8044A2> $TDD = EUtranCellTDD=
+
+$TDD = EUtranCellTDD=
+
+M1CE8044A2> $NRCell = NRCellDU=
+
+$NRCell = NRCellDU=
+
+M1CE8044A2> $NRSec25 = NRSectorCarrier=25-
+
+$NRSec25 = NRSectorCarrier=25-
+
+M1CE8044A2> $NRSec6 = NRSectorCarrier=6-
+
+$NRSec6 = NRSectorCarrier=6-
+
+M1CE8044A2> $NRSec19 = NRSectorCarrier=19-
+
+$NRSec19 = NRSectorCarrier=19-
+
+M1CE8044A2> $LTESec = SectorEquipmentFunction=
+
+$LTESec = SectorEquipmentFunction=
+
+M1CE8044A2> 
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> #		Change JobName and any parameter that needs changing case by case basis    		   #
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> # 		PUT A # SIGN IN FRONT OF ANYTHING YOU DONT WANT TO USE ON THIS SCRIPT  			   #   
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2>       
+
+M1CE8044A2> #$arfcnDL = 507708
+
+M1CE8044A2> #$jobname = Retune_Prechecks
+
+M1CE8044A2> 
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> #				Script Specifics - This is modifiable to your needs						   #
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> #	   FOR SETM COMMANDS YOU HAVE TO REMOVE THE GS+ AND GS- from the script                #
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> ###############################
+
+M1CE8044A2> #### PRECHECK / LOCK / CV #####
+
+M1CE8044A2> ###############################
+
+M1CE8044A2> 
+
+M1CE8044A2> 
+
+M1CE8044A2> lt all
+
+240412-12:58:28-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+Connected to 11.69.207.171 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2)
+
+Last MO: 23067. Loaded 23067 MOs. Total: 23068 MOs.
+
+M1CE8044A2> pr vlanport=
+
+240412-12:58:35-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+===================================================================================
+Proxy  MO
+===================================================================================
+23061  Transport=1,VlanPort=1239
+23062  Transport=1,VlanPort=1323
+23063  Transport=1,VlanPort=3239
+23064  Transport=1,VlanPort=3323
+23065  Transport=1,VlanPort=4001
+23066  Transport=1,VlanPort=4050
+23067  Transport=1,VlanPort=ERAN_NR
+===================================================================================
+Total: 7 MOs
+
+M1CE8044A2> get address address
+
+240412-12:58:35-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+Router=LTE,InterfaceIPv4=LTE,AddressIPv4=1              address           42.197.207.187/27
+Router=LTE,InterfaceIPv4=LTE,AddressIPv4=1              addressIPv4Id     1
+Router=LTE,InterfaceIPv4=LTE,AddressIPv4=1              primaryAddress    true
+Router=LTE,InterfaceIPv4=LTE,AddressIPv4=1              usedAddress       42.197.207.187/27
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 address           169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 usedAddress       169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 address           169.254.42.43/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 usedAddress       169.254.42.43/32
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             address           11.69.207.171/27
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             addressIPv4Id     1
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             primaryAddress    true
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             usedAddress       11.69.207.171/27
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         address           42.197.207.171/27
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         addressIPv4Id     1
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         primaryAddress    true
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         usedAddress       42.197.207.171/27
+=================================================================================================================
+Total: 5 MOs
+
+
+M1CE8044A2> st FDD|TDD|NRCellDU|NbIot
+
+240412-12:58:36-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+   44  0 (LOCKED)    0 (DISABLED)  ENodeBFunction=1,EUtranCellTDD=T1CE8044A11
+  133  0 (LOCKED)    0 (DISABLED)  ENodeBFunction=1,EUtranCellTDD=T1CE8044A12
+  222  0 (LOCKED)    0 (DISABLED)  ENodeBFunction=1,EUtranCellTDD=T1CE8044A21
+  311  0 (LOCKED)    0 (DISABLED)  ENodeBFunction=1,EUtranCellTDD=T1CE8044A22
+  400  0 (LOCKED)    0 (DISABLED)  ENodeBFunction=1,EUtranCellTDD=T1CE8044A31
+  490  0 (LOCKED)    0 (DISABLED)  ENodeBFunction=1,EUtranCellTDD=T1CE8044A32
+ 4029  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A1CE8044A11
+ 4032  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A1CE8044A12
+ 4035  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A1CE8044A21
+ 4038  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A1CE8044A22
+ 4041  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A1CE8044A31
+ 4044  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=A1CE8044A32
+ 4639  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllRssiNpuschReadings
+ 4640  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllSinrNpuschReadings
+ 4641  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllStatus
+===================================================================================
+Total: 15 MOs
+
+M1CE8044A2> 
+
+M1CE8044A2> st termpointtognb=1
+
+240412-12:58:36-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+  628  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=1347211,TermPointToGNB=1
+===================================================================================
+Total: 1 MOs
+
+M1CE8044A2> get ^GNB.*=1 gNBId$
+
+240412-12:58:36-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+GNBCUCPFunction=1                                       gNBId             1353687
+GNBCUUPFunction=1                                       gNBId             1353687
+GNBDUFunction=1                                         gNBId             1353687
+=================================================================================================================
+Total: 3 MOs
+
+
+M1CE8044A2> get FUnction=1 nbid$
+
+240412-12:58:37-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+ENodeBFunction=1                                        eNBId             343830
+GNBCUCPFunction=1                                       gNBId             1353687
+GNBCUUPFunction=1                                       gNBId             1353687
+GNBDUFunction=1                                         gNBId             1353687
+ExtGNBDUPartnerFunction=1                               gNBId             1347211
+=================================================================================================================
+Total: 5 MOs
+
+
+M1CE8044A2> st term
+
+240412-12:58:37-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+  596  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-306343,TermPointToENB=310260-306343
+  604  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-49011,TermPointToENB=310260-49011
+  628  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=1347211,TermPointToGNB=1
+  776  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC1vMME1
+  777  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC1vMME2
+  778  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC2vMME1
+  779  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1CMM01
+  780  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1vMME1
+  781  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1vMME2
+  782  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE4vMME1
+  783  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH2vMME1
+  784  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH3nMME1
+  785  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH3vMME1
+  786  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP1vMME1
+  787  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP2nMME1
+  788  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP2vMME1
+ 1034  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_306343,TermPointToENodeB=auto1
+ 1037  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_310992,TermPointToENodeB=auto1
+ 1045  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_315004,TermPointToENodeB=auto1
+ 1047  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_326557,TermPointToENodeB=auto1
+ 1049  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_326559,TermPointToENodeB=auto1
+ 1051  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_326966,TermPointToENodeB=auto1
+ 1055  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_44536,TermPointToENodeB=auto1
+ 1057  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46288,TermPointToENodeB=auto1
+ 1059  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46367,TermPointToENodeB=auto1
+ 1061  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46374,TermPointToENodeB=auto1
+ 1070  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46803,TermPointToENodeB=auto1
+ 1072  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46804,TermPointToENodeB=auto1
+ 1074  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46805,TermPointToENodeB=auto1
+ 1076  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_46807,TermPointToENodeB=auto1
+ 1078  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_47683,TermPointToENodeB=auto1
+ 1080  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_47958,TermPointToENodeB=auto1
+ 1082  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_47962,TermPointToENodeB=auto1
+ 1084  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_48462,TermPointToENodeB=auto1
+ 1086  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_48465,TermPointToENodeB=auto1
+ 1088  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_48827,TermPointToENodeB=auto1
+ 1096  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49011,TermPointToENodeB=auto1
+ 1102  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49012,TermPointToENodeB=auto1
+ 1115  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49311,TermPointToENodeB=auto1
+ 1123  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49325,TermPointToENodeB=auto1
+ 1125  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49511,TermPointToENodeB=auto1
+ 1127  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_49512,TermPointToENodeB=auto1
+ 1147  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_52972,TermPointToENodeB=auto1
+ 1149  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_57016,TermPointToENodeB=auto1
+ 1151  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_58153,TermPointToENodeB=auto1
+ 1153  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_878641,TermPointToENodeB=auto1
+ 1162  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_880347,TermPointToENodeB=auto1
+ 2085  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=M1CE8044A,TermPointToGNodeB=M1CE8044A
+ 2096  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1313536,TermPointToGNodeB=auto1
+ 2107  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316139,TermPointToGNodeB=auto1
+ 2118  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1316788,TermPointToGNodeB=auto1
+ 2129  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318943,TermPointToGNodeB=auto1
+ 2140  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319490,TermPointToGNodeB=auto1
+ 2151  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319801,TermPointToGNodeB=auto1
+ 2162  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1320652,TermPointToGNodeB=auto1
+ 2173  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1320812,TermPointToGNodeB=auto1
+ 2184  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1321582,TermPointToGNodeB=auto1
+ 2204  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1325149,TermPointToGNodeB=auto1
+ 2224  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1326623,TermPointToGNodeB=auto1
+ 2235  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1327117,TermPointToGNodeB=auto1
+ 2255  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1328850,TermPointToGNodeB=auto1
+ 2266  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1330992,TermPointToGNodeB=auto1
+ 2286  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1331003,TermPointToGNodeB=auto1
+ 2297  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1331397,TermPointToGNodeB=auto1
+ 2308  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1331653,TermPointToGNodeB=auto1
+ 2319  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1333065,TermPointToGNodeB=auto1
+ 2339  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1333066,TermPointToGNodeB=auto1
+ 2359  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1333831,TermPointToGNodeB=auto1
+ 2379  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1335155,TermPointToGNodeB=auto1
+ 2399  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1337462,TermPointToGNodeB=auto1
+ 2419  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1337463,TermPointToGNodeB=auto1
+ 2439  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1338372,TermPointToGNodeB=auto1
+ 2459  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1338968,TermPointToGNodeB=auto1
+ 2473  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1339226,TermPointToGNodeB=auto1
+ 2493  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1340963,TermPointToGNodeB=auto1
+ 2513  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1341171,TermPointToGNodeB=auto1
+ 2533  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1341173,TermPointToGNodeB=auto1
+ 2553  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1341175,TermPointToGNodeB=auto1
+ 2573  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344242,TermPointToGNodeB=auto1
+ 2593  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1344243,TermPointToGNodeB=auto1
+ 2613  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1347114,TermPointToGNodeB=auto1
+ 2627  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348217,TermPointToGNodeB=auto1
+ 2641  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1348218,TermPointToGNodeB=auto1
+ 2661  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349495,TermPointToGNodeB=auto1
+ 2681  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349797,TermPointToGNodeB=auto1
+ 2701  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349798,TermPointToGNodeB=auto1
+ 2721  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349799,TermPointToGNodeB=auto1
+ 2741  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349800,TermPointToGNodeB=auto1
+ 2761  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349807,TermPointToGNodeB=auto1
+ 2781  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349808,TermPointToGNodeB=auto1
+ 2801  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351039,TermPointToGNodeB=auto1
+ 2821  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351040,TermPointToGNodeB=auto1
+ 2835  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351041,TermPointToGNodeB=auto1
+ 2849  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351042,TermPointToGNodeB=auto1
+ 2863  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351046,TermPointToGNodeB=auto1
+ 2883  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351428,TermPointToGNodeB=auto1
+ 2903  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351832,TermPointToGNodeB=auto1
+ 2914  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1354839,TermPointToGNodeB=auto1
+ 2934  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1354840,TermPointToGNodeB=auto1
+ 2945  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355027,TermPointToGNodeB=auto1
+ 2956  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355028,TermPointToGNodeB=auto1
+ 2967  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355029,TermPointToGNodeB=auto1
+ 2978  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355030,TermPointToGNodeB=auto1
+ 2989  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355032,TermPointToGNodeB=auto1
+ 3000  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355034,TermPointToGNodeB=auto1
+ 3011  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355037,TermPointToGNodeB=auto1
+ 3022  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1355038,TermPointToGNodeB=auto1
+ 3042  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1359827,TermPointToGNodeB=auto1
+ 3062  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1359928,TermPointToGNodeB=auto1
+ 3073  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1366288,TermPointToGNodeB=auto1
+ 3084  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1367811,TermPointToGNodeB=auto1
+ 3104  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370019,TermPointToGNodeB=auto1
+ 3124  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370047,TermPointToGNodeB=auto1
+ 3144  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370072,TermPointToGNodeB=auto1
+ 3164  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1370569,TermPointToGNodeB=auto1
+ 3184  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1371057,TermPointToGNodeB=auto1
+ 3234  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC1AMF01
+ 3236  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF01
+ 3238  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF02
+ 3240  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE1CMM01
+ 3242  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE3AMF01
+ 3244  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF01
+ 3246  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF02
+ 3248  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH1AMF01
+ 3250  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,TermPointToAmf=PH2AMF01
+ 3251  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH2AMF02
+ 3253  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH3AMF01
+ 3255  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP1AMF01
+ 3257  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF01
+ 3259  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF02
+ 3261                1 (ENABLED)   GNBCUCPFunction=1,TermPointToGNBDU=1
+ 4020                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1,InterMeLink=1
+ 4021                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=1,InterMeLink=2
+ 4023                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=3,InterMeLink=1
+ 4024                1 (ENABLED)   GNBDUFunction=1,ExtGNBDUPartnerFunction=3,InterMeLink=2
+ 4134  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,TermPointToGNBCUCP=1
+===================================================================================
+Total: 136 MOs
+
+M1CE8044A2> 
+
+M1CE8044A2> enm cmedit get *$Node* 
+
+240412-12:58:43-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+
+FDN : SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2
+
+FDN : SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A
+
+FDN : SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3
+
+FDN : SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=C1CE8044A
+
+4 instance(s)
+
+M1CE8044A2> enm cmedit get *$Node* AddressIPv4.(*) -t
+
+240412-12:58:44-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+
+SubNetwork,SubNetwork,MeContext,ManagedElement,Transport,Router,InterfaceIPv4,AddressIPv4
+NodeId	TransportId	RouterId	InterfaceIPv4Id	AddressIPv4Id	address	addressIPv4Id	configurationMode	dhcpClientIdentifier	dhcpClientIdentifierType	primaryAddress	reservedBy	usedAddress	userLabel
+M1CE8044A	1	Node_Internal_F1	NRDU	1	169.254.42.43/32	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,Transport=1,SctpEndpoint=F1_NRDU]	169.254.42.43/32	null
+M1CE8044A	1	Node_Internal_F1	NRCUCP	1	169.254.42.42/32	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,Transport=1,SctpEndpoint=F1_NRCUCP]	169.254.42.42/32	null
+M1CE8044A	1	vr_OAM	1	1	11.69.207.170/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,SystemFunctions=1,SysM=1,OamAccessPoint=1]	11.69.207.170/27	null
+M1CE8044A	1	vr_TRAFFIC	1	1	42.197.207.170/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,GNBCUUPFunction=1,EndpointResource=1,LocalIpEndpoint=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,Transport=1,SctpEndpoint=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,Transport=1,SctpEndpoint=2, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,Transport=1,SctpEndpoint=xn]	42.197.207.170/27	null
+M1CE8044A	1	LTE	LTE	1	42.197.207.186/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,Transport=1,SctpEndpoint=LTE, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,ENodeBFunction=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A,ManagedElement=M1CE8044A,ENodeBFunction=1]	42.197.207.186/27	null
+M1CE8044A3	1	LTE	1	1	42.197.207.180/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,ENodeBFunction=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,Transport=1,SctpEndpoint=1]	42.197.207.180/27	null
+M1CE8044A3	1	vr_OAM	1	1	11.69.207.180/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,SystemFunctions=1,SysM=1,OamAccessPoint=1]	11.69.207.180/27	null
+M1CE8044A3	1	Node_Internal_F1	NRCUCP	1	169.254.42.42/32	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,Transport=1,SctpEndpoint=F1_NRCUCP]	169.254.42.42/32	null
+M1CE8044A3	1	Node_Internal_F1	NRDU	1	169.254.42.43/32	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,Transport=1,SctpEndpoint=F1_NRDU]	169.254.42.43/32	null
+M1CE8044A3	1	vr_TRAFFIC	1	1	42.197.207.162/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,Transport=1,SctpEndpoint=NR_X2, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,Transport=1,SctpEndpoint=NR_Xn, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,GNBCUUPFunction=1,EndpointResource=1,LocalIpEndpoint=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A3,ManagedElement=M1CE8044A3,Transport=1,SctpEndpoint=NR_N2]	42.197.207.162/27	CP_UP_IPAddress
+M1CE8044A2	1	vr_TRAFFIC	1	1	42.197.207.171/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,GNBCUUPFunction=1,EndpointResource=1,LocalIpEndpoint=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,Transport=1,SctpEndpoint=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,Transport=1,SctpEndpoint=2, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,Transport=1,SctpEndpoint=xn]	42.197.207.171/27	null
+M1CE8044A2	1	vr_OAM	1	1	11.69.207.171/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,SystemFunctions=1,SysM=1,OamAccessPoint=1]	11.69.207.171/27	null
+M1CE8044A2	1	LTE	LTE	1	42.197.207.187/27	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,Transport=1,SctpEndpoint=LTE, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,ENodeBFunction=1, SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,ENodeBFunction=1]	42.197.207.187/27	null
+M1CE8044A2	1	Node_Internal_F1	NRDU	1	169.254.42.43/32	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,Transport=1,SctpEndpoint=F1_NRDU]	169.254.42.43/32	null
+M1CE8044A2	1	Node_Internal_F1	NRCUCP	1	169.254.42.42/32	1	MANUAL	null	AUTOMATIC	true	[SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M1CE8044A2,ManagedElement=M1CE8044A2,Transport=1,SctpEndpoint=F1_NRCUCP]	169.254.42.42/32	null
+
+15 instance(s)
+
+M1CE8044A2> 
+
+M1CE8044A2> hget AddressIPv4 ^address$
+
+240412-12:58:45-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+.
+=================================================================================================================
+MO                                                         address          
+=================================================================================================================
+Router=LTE,InterfaceIPv4=LTE,AddressIPv4=1                 42.197.207.187/27
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 169.254.42.42/32 
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1   169.254.42.43/32 
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1                11.69.207.171/27 
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1            42.197.207.171/27
+=================================================================================================================
+Total: 5 MOs
+
+Added 5 MOs to group: hget_group
+
+M1CE8044A2> 
+
+M1CE8044A2> pmxz NRCell PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$ -m 10
+
+240412-12:58:46-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+Parsing PM cache: /home/shared/gbadim1/moshell/jarxml/PMCACHE_MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.txt.gz ... Done.
+
+.....................
+get /rop/A20240412.1145-1200_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1145-1200_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1200-1215_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1200-1215_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1215-1230_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1215-1230_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1230-1245_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1230-1245_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1245-1300_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1245-1300_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1300-1315_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1300-1315_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1315-1330_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1315-1330_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1330-1345_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1330-1345_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1345-1400_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1345-1400_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1400-1415_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1400-1415_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1415-1430_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1415-1430_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1430-1445_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1430-1445_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1445-1500_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1445-1500_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1500-1515_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1500-1515_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1515-1530_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1515-1530_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1530-1545_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1530-1545_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1545-1600_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1545-1600_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1600-1615_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1600-1615_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1615-1630_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1615-1630_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1630-1645_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1630-1645_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1645-1700_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1645-1700_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1700-1715_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1700-1715_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1715-1730_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1715-1730_M1CE8044A2.xml.gz ... OK
+get /rop/A20240412.1730-1745_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1730-1745_M1CE8044A2.xml.gz ... OK
+
+(gzip -dc /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0745-0800_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0800-0815_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0815-0830_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0830-0845_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0845-0900_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0900-0915_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0915-0930_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0930-0945_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.0945-1000_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1000-1015_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1015-1030_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1030-1045_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1045-1100_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1100-1115_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1115-1130_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1130-1145_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1145-1200_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1200-1215_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1215-1230_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1230-1245_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1245-1300_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1300-1315_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1315-1330_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1330-1345_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1345-1400_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1400-1415_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1415-1430_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1430-1445_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1445-1500_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1500-1515_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1515-1530_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1530-1545_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1545-1600_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1600-1615_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1615-1630_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1630-1645_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1645-1700_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1700-1715_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1715-1730_M1CE8044A2.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.207.171/rop/A20240412.1730-1745_M1CE8044A2.xml.gz | LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk -vusergawk="LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk" -f /opt/ericsson/amos/moshell/commonjars/pmExtract.awk  "nrcell" "PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$"   | sort | uniq | /usr/bin/perl /opt/ericsson/amos/moshell/pmXtab -q -pval 0 -mom /var/tmp/20240412-125816_2855066/pmxmomLog2855213  -cols time -fmt txt -m "[M]anagedElement=[^,]+,(?:\w+=1,){0,1}((\w+=[^,]+,*)+$)"  )2>&1 | tee -a /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240412-125819_M1CE8044A2.log
+
+Report from 2024-04-12 07:45 UTC to 2024-04-12 17:44 UTC (40 ropfiles)
+Node SW: CXP2010174/1_R82C53 (23.Q4)
+
+Date: 2024-04-12
+Object               Counter            02:45  03:00  03:15  03:30  03:45  04:00  04:15  04:30  04:45  05:00  05:15  05:30  05:45  06:00  06:15  06:30  06:45  07:00  07:15  07:30  07:45  08:00  08:15  08:30  08:45  09:00  09:15  09:30  09:45  10:00  10:15  10:30  10:45  11:00  11:15  11:30  11:45  12:00  12:15  12:30
+NRCellCU=A1CE8044A11 pmEndcSetupUeAtt      33     28     29     30     31     24     31     26     31     31     80     43     50     64     43     32     55     65     48     52     54     33     43    106     62     53     28     85    132     67     79     87     83     46     38     69     35     47    105     71
+NRCellCU=A1CE8044A11 pmEndcSetupUeSucc     33     28     29     30     31     24     31     26     31     31     80     43     50     64     43     32     55     65     48     52     54     33     43    105     62     53     28     85    132     67     79     87     83     46     38     69     35     47    105     71
+NRCellCU=A1CE8044A12 pmEndcSetupUeAtt      32     29     30     33     16     16     16     22     17     19     57     19     14     28     27     18     44     41     27     26     34     44     26     43     33     20     37     59     90     62     44     68     54     30     32     25     24     34     57     39
+NRCellCU=A1CE8044A12 pmEndcSetupUeSucc     32     29     30     33     16     16     16     22     17     19     57     19     14     28     27     18     44     40     27     26     34     44     26     43     33     20     37     59     90     62     44     68     54     30     32     25     24     34     57     39
+NRCellCU=A1CE8044A21 pmEndcSetupUeAtt     202    239    317    269    221    323    227    148    143    199    194    188    205    221    250    251    307    271    230    265    267    195    234    267    198    234    250    297    350    261    206    258    281    250    269    241    245    214    350    290
+NRCellCU=A1CE8044A21 pmEndcSetupUeSucc    202    239    317    269    221    323    227    148    143    199    194    188    205    221    250    251    307    271    230    265    267    195    234    267    198    233    250    297    350    261    206    258    281    249    269    241    245    214    350    290
+NRCellCU=A1CE8044A22 pmEndcSetupUeAtt      88     81     78     77    162    101    112     60    237    104    105    108    145    151     83     73     91     84     98    108    137    130    133    146    129    147     85     95    104     96    117    132    109     73    147    135     92    129    151    146
+NRCellCU=A1CE8044A22 pmEndcSetupUeSucc     88     81     78     77    162    101    112     60    237    104    105    108    145    151     83     73     91     84     98    108    137    129    133    146    129    147     85     95    104     96    117    132    109     73    147    135     92    129    151    146
+NRCellCU=A1CE8044A31 pmEndcSetupUeAtt      58     81     78     68     49     38     46     69     78     77     62     68     78     76     80     80     67     62     59     67     61     67     56     69     55     60     54     64     45     58     65     57     62     60     80     68     63     80     62     57
+NRCellCU=A1CE8044A31 pmEndcSetupUeSucc     58     81     78     68     49     38     46     69     78     77     62     68     78     76     80     80     67     62     59     67     61     67     56     69     55     60     54     64     45     58     65     57     62     60     80     68     63     80     62     57
+NRCellCU=A1CE8044A32 pmEndcSetupUeAtt      29      7      2      2      0      1      0      0      2      3      1      1      3      7      3      3      2     17      2      3     13      5      6     12     35     37     15      4      4      1      3      5      3      1     15     15      3     19     10     12
+NRCellCU=A1CE8044A32 pmEndcSetupUeSucc     29      7      2      2      0      1      0      0      2      3      1      1      3      7      3      3      2     17      2      3     13      5      6     12     35     37     15      4      4      1      3      5      3      1     15     15      3     19     10     12
+
+
+M1CE8044A2> ue print -admitted
+Checking available boards on node...
+
+Collecting RCS board data ...
+..............................................................................
+..
+.....
+240412-12:59:52-0500 11.69.207.171 23.0n MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2855213
+coli>/lrat/ue print -admitted
+Found no active cells!
+coli>/rc/nrat/ue print -admitted
+NrEnDc: uehId:4 ues:9
+NrEnDc: uehId:5 ues:13
+NrEnDc: uehId:6 ues:9
+NrEnDc: uehId:7 ues:8
+NrNrDc: uehId:4 ues:0
+NrNrDc: uehId:5 ues:0
+NrNrDc: uehId:6 ues:0
+NrNrDc: uehId:7 ues:0
+Nr: uehId:4 ues:2
+Nr: uehId:5 ues:1
+Nr: uehId:6 ues:3
+Nr: uehId:7 ues:2
+coli>/rpc/nrat/ue print -admitted
+uehId:6 ues:1
+uehId:7 ues:11
+uehId:8 ues:14
+uehId:9 ues:12
+uehId:10 ues:10
+coli>
+
+M1CE8044A2> 
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> #		 Post Script CV and unset of all variables - This is modifiable to your needs      #
+
+M1CE8044A2> ############################################################################################
+
+M1CE8044A2> 
+
+M1CE8044A2> 
+
+M1CE8044A2> l-
+
+Log close: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240412-125819_M1CE8044A2.log
+
+M1CE8044A2> confb-
+
+M1CE8044A2> gs-
+
+Perform a get before set = disabled
+
+M1CE8044A2> 
+
+M1CE8044A2> 
+
+M1CE8044A2> #cvms post_$jobname_$date
+
+M1CE8044A2> 
+
+M1CE8044A2> #Keep the unset all after the cv so the variables can be used
+
+M1CE8044A2> unset all 
+
+M1CE8044A2> 
+
+M1CE8044A2> #cmedit set NetworkElement=M7BAN764A,ComConnectivityInformation=1 ipAddress=11.242.0.98#
+Bye...
+Output has been logged to file /home/shared/common/Overnight_Work/Rehomes/Postchecks//M1CE8044A2.log

@@ -1,0 +1,582 @@
+Logging to file /home/shared/common/Overnight_Work/Rehomes/Postchecks/M2LU4194A.log
+                        __  __  ____   _____
+                  /\   |  \/  |/ __ \ / ____|
+                 /  \  | \  / | |  | | (___  
+                / /\ \ | |\/| | |  | |\___ \ 
+               / ____ \| |  | | |__| |____) |
+              /_/    \_\_|  |_|\____/|_____/
+              OSS Framework for MoShell-24.0c 
+  Copyright (c) Ericsson AB 2001-2024 - All Rights Reserved
+              
+           
+$amosrb_pid = 3664403
+
+Checking ip contact...OK
+
+HELP MENU            : h
+BASIC MO COMMANDS    : m
+OTHER MO COMMANDS    : n
+OTHER COMMANDS       : o
+PM COMMANDS          : p
+QUIT                 : q
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> #				Script Foundation - Leave this for all scripts							   #
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> 
+
+M2LU4194A> confb+
+
+M2LU4194A> gs+
+
+Perform a get before set = enabled
+
+M2LU4194A> unset all
+
+M2LU4194A> l+
+
+Logging to file: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240418-060009_M2LU4194A.log
+
+M2LU4194A> 
+
+M2LU4194A> alt
+
+240418-06:00:09-0500 11.69.145.203 24.0c  stopfile=/tmp/3663776
+Looking up temporary_amos account... OK.
+Trying temporary_amos_gbadim1_291's password from amos lookupAccount ... OK
+
+$ssh_pid = 3665501
+
+Connected to 11.69.145.203 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M2LU4194A,ManagedElement=M2LU4194A)
+
+Checking MOM version...MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9
+Parsing MOM (cached): /var/tmp/20240418-060001_3663510/MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.xml.cache.gz ...........................................................................................................................................................................................................Done.
+Using paramfile /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q4.txt
+Parsing file /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q4.txt ...................................................................................Done.
+Using imomdfile /opt/ericsson/amos/moshell/commonjars/pm/IMOMD_MSRBS_22.Q4.txt
+Using imomfile /opt/ericsson/amos/moshell/commonjars/pm/IMOM_MSRBS_23.Q4.txt
+
+Collecting Alarms...
+
+====================================================================================================================
+Date & Time (UTC)   S Specific Problem                    MO (AdditionalText/PC, AI)
+====================================================================================================================
+2024-04-18 03:25:39 m External Link Failure               ENodeBFunction=1 (X2 link problem to one or several neighbouring eNodeBs. AI: PLMN ID-eNB ID 1 : 310260-331984)
+>>> Total: 1 Alarms (0 Critical, 0 Major)
+
+M2LU4194A> 
+
+M2LU4194A> uv sls_username > $user
+
+sls_username              = gbadim1
+
+$user = gbadim1
+
+M2LU4194A> $date = `date +%y%m%d-%H%M`
+
+$date = 240418-0600
+
+M2LU4194A> $Node = `echo "$nodename" | cut -c 2-9`
+
+$Node = 2LU4194A
+
+M2LU4194A> $L21 = L
+
+$L21 = L
+
+M2LU4194A> $L19 = B
+
+$L19 = B
+
+M2LU4194A> $L7 = D
+
+$L7 = D
+
+M2LU4194A> $L6 = E
+
+$L6 = E
+
+M2LU4194A> $N6 = K
+
+$N6 = K
+
+M2LU4194A> $N25 = A
+
+$N25 = A
+
+M2LU4194A> $L25 = T
+
+$L25 = T
+
+M2LU4194A> $N19 = J
+
+$N19 = J
+
+M2LU4194A> $N71 = K
+
+$N71 = K
+
+M2LU4194A> $2C = .*2$
+
+$2C = .*2$
+
+M2LU4194A> $1C = .*1$
+
+$1C = .*1$
+
+M2LU4194A> $allcell = TDD|FDD|NRCellDU|Nbiot
+
+$allcell = TDD|FDD|NRCellDU|Nbiot
+
+M2LU4194A> $FDD = EUtranCellFDD=
+
+$FDD = EUtranCellFDD=
+
+M2LU4194A> $TDD = EUtranCellTDD=
+
+$TDD = EUtranCellTDD=
+
+M2LU4194A> $NRCell = NRCellDU=
+
+$NRCell = NRCellDU=
+
+M2LU4194A> $NRSec25 = NRSectorCarrier=25-
+
+$NRSec25 = NRSectorCarrier=25-
+
+M2LU4194A> $NRSec6 = NRSectorCarrier=6-
+
+$NRSec6 = NRSectorCarrier=6-
+
+M2LU4194A> $NRSec19 = NRSectorCarrier=19-
+
+$NRSec19 = NRSectorCarrier=19-
+
+M2LU4194A> $LTESec = SectorEquipmentFunction=
+
+$LTESec = SectorEquipmentFunction=
+
+M2LU4194A> 
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> #		Change JobName and any parameter that needs changing case by case basis    		   #
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> # 		PUT A # SIGN IN FRONT OF ANYTHING YOU DONT WANT TO USE ON THIS SCRIPT  			   #   
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A>       
+
+M2LU4194A> #$arfcnDL = 507708
+
+M2LU4194A> #$jobname = Retune_Prechecks
+
+M2LU4194A> 
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> #				Script Specifics - This is modifiable to your needs						   #
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> #	   FOR SETM COMMANDS YOU HAVE TO REMOVE THE GS+ AND GS- from the script                #
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> ###############################
+
+M2LU4194A> #### PRECHECK / LOCK / CV #####
+
+M2LU4194A> ###############################
+
+M2LU4194A> 
+
+M2LU4194A> 
+
+M2LU4194A> lt all
+
+240418-06:00:19-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+Connected to 11.69.145.203 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=M2LU4194A,ManagedElement=M2LU4194A)
+
+Last MO: 21582. Loaded 21582 MOs. Total: 21583 MOs.
+
+M2LU4194A> pr vlanport=
+
+240418-06:00:33-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+===================================================================================
+Proxy  MO
+===================================================================================
+21580  Transport=1,VlanPort=3388
+21581  Transport=1,VlanPort=4001
+21582  Transport=1,VlanPort=ERAN
+===================================================================================
+Total: 3 MOs
+
+M2LU4194A> get address address
+
+240418-06:00:33-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 address           169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 usedAddress       169.254.42.42/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 address           169.254.42.43/32
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 addressIPv4Id     1
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 primaryAddress    true
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1 usedAddress       169.254.42.43/32
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             address           11.69.145.203/27
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             addressIPv4Id     1
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             primaryAddress    true
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             usedAddress       11.69.145.203/27
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         address           42.197.145.203/29
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         addressIPv4Id     1
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         primaryAddress    true
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1         usedAddress       42.197.145.203/29
+Router=vr_TRAFFIC,InterfaceIPv4=LTE,AddressIPv4=1       address           42.197.145.218/32
+Router=vr_TRAFFIC,InterfaceIPv4=LTE,AddressIPv4=1       addressIPv4Id     1
+Router=vr_TRAFFIC,InterfaceIPv4=LTE,AddressIPv4=1       primaryAddress    true
+Router=vr_TRAFFIC,InterfaceIPv4=LTE,AddressIPv4=1       usedAddress       42.197.145.218/32
+=================================================================================================================
+Total: 5 MOs
+
+
+M2LU4194A> st FDD|TDD|NRCellDU|NbIot
+
+240418-06:00:33-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+   44  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=D2LU4194A11
+  143  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=D2LU4194A21
+  246  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=D2LU4194A31
+  351  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtranCellFDD=D2LU4194A41
+ 2594  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=K2LU4194A11
+ 2597  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=K2LU4194A21
+ 2600  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=K2LU4194A31
+ 2603  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,NRCellDU=K2LU4194A41
+ 3188  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllRssiNpuschReadings
+ 3189  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllSinrNpuschReadings
+ 3190  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllStatus
+===================================================================================
+Total: 11 MOs
+
+M2LU4194A> 
+
+M2LU4194A> st termpointtognb=1
+
+240418-06:00:34-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+  583  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=1339814,TermPointToGNB=1
+===================================================================================
+Total: 1 MOs
+
+M2LU4194A> get ^GNB.*=1 gNBId$
+
+240418-06:00:34-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+GNBCUCPFunction=1                                       gNBId             1339814
+GNBCUUPFunction=1                                       gNBId             1339814
+GNBDUFunction=1                                         gNBId             1339814
+=================================================================================================================
+Total: 3 MOs
+
+
+M2LU4194A> get FUnction=1 nbid$
+
+240418-06:00:35-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+ENodeBFunction=1                                        eNBId             874849
+GNBCUCPFunction=1                                       gNBId             1339814
+GNBCUUPFunction=1                                       gNBId             1339814
+GNBDUFunction=1                                         gNBId             1339814
+=================================================================================================================
+Total: 4 MOs
+
+
+M2LU4194A> st term
+
+240418-06:00:35-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+  476  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-131528,TermPointToENB=310260-131528
+  479  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-132806,TermPointToENB=310260-132806
+  482  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-132809,TermPointToENB=310260-132809
+  490  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-219117,TermPointToENB=310260-219117
+  494  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-331984,TermPointToENB=310260-331984
+  506  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-347683,TermPointToENB=310260-347683
+  514  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-50743,TermPointToENB=310260-50743
+  519  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-50747,TermPointToENB=310260-50747
+  527  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-51099,TermPointToENB=310260-51099
+  530  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-54465,TermPointToENB=310260-54465
+  533  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-54635,TermPointToENB=310260-54635
+  536                1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-874847,EranInterMeLink=1
+  547  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-874847,TermPointToENB=310260-874847
+  583  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,GUtraNetwork=1,ExternalGNodeBFunction=1339814,TermPointToGNB=1
+  789  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC1vMME1
+  790  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC1vMME2
+  791  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=DC2vMME1
+  792  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1CMM01
+  793  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1vMME1
+  794  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE1vMME2
+  795  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=NE4vMME1
+  796  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH2vMME1
+  797  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH3nMME1
+  798  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=PH3vMME1
+  799  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP1vMME1
+  800  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP2nMME1
+  801  1 (UNLOCKED)  1 (ENABLED)   ENodeBFunction=1,TermPointToMme=UP2vMME1
+ 1277  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_127390,TermPointToENodeB=auto1
+ 1279  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_149725,TermPointToENodeB=auto1
+ 1284  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_219117,TermPointToENodeB=auto1
+ 1290  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_347683,TermPointToENodeB=auto1
+ 1302  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_50743,TermPointToENodeB=auto1
+ 1310  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_50747,TermPointToENodeB=auto1
+ 1318  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_51099,TermPointToENodeB=auto1
+ 1320  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54465,TermPointToENodeB=auto1
+ 1323  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_54635,TermPointToENodeB=auto1
+ 1325  0 (LOCKED)    0 (DISABLED)  GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_55454,TermPointToENodeB=auto1
+ 1335  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_874847,TermPointToENodeB=auto1
+ 1341  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,EUtraNetwork=1,ExternalENodeBFunction=auto310_260_3_874849,TermPointToENodeB=auto1
+ 1626  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318565,TermPointToGNodeB=auto1
+ 1637  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1318693,TermPointToGNodeB=auto1
+ 1648  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1319881,TermPointToGNodeB=auto1
+ 1659  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1321529,TermPointToGNodeB=auto1
+ 1673  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1324604,TermPointToGNodeB=auto1
+ 1687  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1330571,TermPointToGNodeB=auto1
+ 1701  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1333356,TermPointToGNodeB=auto1
+ 1727  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1334181,TermPointToGNodeB=auto1
+ 1738  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1335563,TermPointToGNodeB=auto1
+ 1758  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1335564,TermPointToGNodeB=auto1
+ 1766  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1335565,TermPointToGNodeB=auto1
+ 1792  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1336307,TermPointToGNodeB=auto1
+ 1812  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1336308,TermPointToGNodeB=auto1
+ 1823  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1341824,TermPointToGNodeB=auto1
+ 1843  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1343351,TermPointToGNodeB=auto1
+ 1869  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345584,TermPointToGNodeB=auto1
+ 1886  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1345586,TermPointToGNodeB=auto1
+ 1912  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349460,TermPointToGNodeB=auto1
+ 1932  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349461,TermPointToGNodeB=auto1
+ 1958  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1349759,TermPointToGNodeB=auto1
+ 1978  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1351857,TermPointToGNodeB=auto1
+ 1989  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1352445,TermPointToGNodeB=auto1
+ 2015  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353148,TermPointToGNodeB=auto1
+ 2032  1 (UNLOCKED)  0 (DISABLED)  GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353278,TermPointToGNodeB=auto1
+ 2054  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353370,TermPointToGNodeB=auto1
+ 2071  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353373,TermPointToGNodeB=auto1
+ 2088  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353374,TermPointToGNodeB=auto1
+ 2105  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353377,TermPointToGNodeB=auto1
+ 2122  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1353379,TermPointToGNodeB=auto1
+ 2142  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1372209,TermPointToGNodeB=auto1
+ 2162  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,NRNetwork=1,ExternalGNBCUCPFunction=auto310_260_3_1372211,TermPointToGNodeB=auto1
+ 2214  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC1AMF01
+ 2216  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF01
+ 2218  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=DC2AMF02
+ 2220  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE1CMM01
+ 2222  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE3AMF01
+ 2224  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF01
+ 2226  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=NE4AMF02
+ 2228  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH1AMF01
+ 2230  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH2AMF01
+ 2232  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH2AMF02
+ 2234  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=PH3AMF01
+ 2236  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP1AMF01
+ 2238  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF01
+ 2240  1 (UNLOCKED)  1 (ENABLED)   GNBCUCPFunction=1,TermPointToAmf=UP2AMF02
+ 2242                1 (ENABLED)   GNBCUCPFunction=1,TermPointToGNBDU=1
+ 2687  1 (UNLOCKED)  1 (ENABLED)   GNBDUFunction=1,TermPointToGNBCUCP=1
+===================================================================================
+Total: 86 MOs
+
+M2LU4194A> 
+
+M2LU4194A> enm cmedit get *$Node* 
+
+240418-06:00:39-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+
+
+Not allowed to run from amosbatch.
+
+
+M2LU4194A> enm cmedit get *$Node* AddressIPv4.(*) -t
+
+240418-06:00:39-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+
+
+Not allowed to run from amosbatch.
+
+
+M2LU4194A> 
+
+M2LU4194A> hget AddressIPv4 ^address$
+
+240418-06:00:39-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+.
+=================================================================================================================
+MO                                                         address          
+=================================================================================================================
+Router=Node_Internal_F1,InterfaceIPv4=NRCUCP,AddressIPv4=1 169.254.42.42/32 
+Router=Node_Internal_F1,InterfaceIPv4=NRDU,AddressIPv4=1   169.254.42.43/32 
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1                11.69.145.203/27 
+Router=vr_TRAFFIC,InterfaceIPv4=1,AddressIPv4=1            42.197.145.203/29
+Router=vr_TRAFFIC,InterfaceIPv4=LTE,AddressIPv4=1          42.197.145.218/32
+=================================================================================================================
+Total: 5 MOs
+
+Added 5 MOs to group: hget_group
+
+M2LU4194A> 
+
+M2LU4194A> pmxz NRCell PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$ -m 10
+
+240418-06:00:40-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+Parsing PM cache: /home/shared/gbadim1/moshell/jarxml/PMCACHE_MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.txt.gz ... Done.
+
+.......................
+get /rop/A20240418.0030-0045_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0030-0045_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0045-0100_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0045-0100_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0100-0115_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0100-0115_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0115-0130_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0115-0130_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0130-0145_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0130-0145_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0145-0200_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0145-0200_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0200-0215_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0200-0215_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0215-0230_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0215-0230_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0230-0245_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0230-0245_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0245-0300_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0245-0300_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0300-0315_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0300-0315_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0330-0345_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0330-0345_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0345-0400_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0345-0400_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0400-0415_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0400-0415_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0415-0430_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0415-0430_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0430-0445_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0430-0445_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0445-0500_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0445-0500_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0500-0515_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0500-0515_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0515-0530_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0515-0530_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0530-0545_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0530-0545_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0545-0600_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0545-0600_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0600-0615_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0600-0615_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0615-0630_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0615-0630_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0630-0645_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0630-0645_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0645-0700_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0645-0700_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0700-0715_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0700-0715_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0715-0730_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0715-0730_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0730-0745_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0730-0745_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0745-0800_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0745-0800_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0800-0815_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0800-0815_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0815-0830_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0815-0830_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0830-0845_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0830-0845_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0845-0900_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0845-0900_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0900-0915_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0900-0915_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0915-0930_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0915-0930_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0930-0945_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0930-0945_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.0945-1000_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0945-1000_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.1000-1015_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1000-1015_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.1015-1030_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1015-1030_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.1030-1045_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1030-1045_M2LU4194A.xml.gz ... OK
+get /rop/A20240418.1045-1100_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1045-1100_M2LU4194A.xml.gz ... OK
+
+(gzip -dc /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0100-0115_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0115-0130_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0130-0145_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0145-0200_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0200-0215_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0215-0230_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0230-0245_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0245-0300_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0300-0315_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0330-0345_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0345-0400_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0400-0415_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0415-0430_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0430-0445_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0445-0500_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0500-0515_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0515-0530_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0530-0545_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0545-0600_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0600-0615_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0615-0630_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0630-0645_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0645-0700_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0700-0715_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0715-0730_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0730-0745_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0745-0800_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0800-0815_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0815-0830_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0830-0845_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0845-0900_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0900-0915_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0915-0930_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0930-0945_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.0945-1000_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1000-1015_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1015-1030_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1030-1045_M2LU4194A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.145.203/rop/A20240418.1045-1100_M2LU4194A.xml.gz | LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk -vusergawk="LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk" -f /opt/ericsson/amos/moshell/commonjars/pmExtract.awk  "nrcell" "PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$"   | sort | uniq | /usr/bin/perl /opt/ericsson/amos/moshell/pmXtab -q -pval 0 -mom /var/tmp/20240418-060001_3663510/pmxmomLog3663776  -cols time -fmt txt -m "[M]anagedElement=[^,]+,(?:\w+=1,){0,1}((\w+=[^,]+,*)+$)"  )2>&1 | tee -a /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240418-060009_M2LU4194A.log
+
+Report from 2024-04-18 01:00 UTC to 2024-04-18 10:59 UTC (39 ropfiles)
+Node SW: CXP9024418/15_R85C47 (23.Q4.0-3)
+
+Date: 2024-04-17, 2024-04-18
+Object               Counter            20:00  20:15  20:30  20:45  21:00  21:15  21:30  21:45  22:00  22:30  22:45  23:00  23:15  23:30  23:45  00:00  00:15  00:30  00:45  01:00  01:15  01:30  01:45  02:00  02:15  02:30  02:45  03:00  03:15  03:30  03:45  04:00  04:15  04:30  04:45  05:00  05:15  05:30  05:45
+NRCellCU=K2LU4194A11 pmEndcSetupUeAtt      15     14      1      0      0      0      1      0      0      0      0      0      1      1      0      1      5      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      3      0      0      0     60
+NRCellCU=K2LU4194A11 pmEndcSetupUeSucc     15     14      1      0      0      0      1      0      0      0      0      0      1      1      0      1      5      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      3      0      0      0     60
+NRCellCU=K2LU4194A21 pmEndcSetupUeAtt       9      4      9      1      1      4      3      0      0      0      0      0      0      4      0      0      0      0      0      1      0      0      0      2      0      0      0      0      0      0      0      3      0      3      0      1      1      2      8
+NRCellCU=K2LU4194A21 pmEndcSetupUeSucc      9      4      9      1      1      4      3      0      0      0      0      0      0      4      0      0      0      0      0      1      0      0      0      2      0      0      0      0      0      0      0      3      0      3      0      1      1      2      8
+NRCellCU=K2LU4194A31 pmEndcSetupUeAtt       5      1      1      4      0      0      0      2      0      0      0      0      1      3      1      0      0      0      0      0      0      0      0      0      0      0      0      1      0      0      1      4      6      4      9      4      2      0      4
+NRCellCU=K2LU4194A31 pmEndcSetupUeSucc      5      1      1      4      0      0      0      2      0      0      0      0      1      3      1      0      0      0      0      0      0      0      0      0      0      0      0      1      0      0      1      4      6      4      9      4      2      0      4
+NRCellCU=K2LU4194A41 pmEndcSetupUeAtt       6      7      2      6      4      1      4      0      0      0      0      9      2      1      2      3      2      1      0      0      5      3      2      9      4      4      2      2      3      6      1      1      2      2      3      4      2      0      4
+NRCellCU=K2LU4194A41 pmEndcSetupUeSucc      6      7      2      6      4      1      4      0      0      0      0      9      2      1      2      3      2      1      0      0      5      3      2      9      4      4      2      2      3      6      1      1      2      2      3      4      2      0      4
+
+
+M2LU4194A> ue print -admitted
+Checking available boards on node...
+
+Collecting RCS board data ...
+......................................................................
+.
+.....
+240418-06:01:41-0500 11.69.145.203 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/3663776
+coli>/lrat/ue print -admitted
+CellId  #UE:s  #Bearers  
+  21       0        0
+  22       4        8
+  23       2        4
+  24       1        2
+coli>/rc/nrat/ue print -admitted
+NrEnDc: uehId:4 ues:0
+NrEnDc: uehId:5 ues:0
+NrEnDc: uehId:6 ues:0
+NrEnDc: uehId:7 ues:1
+NrNrDc: uehId:4 ues:0
+NrNrDc: uehId:5 ues:0
+NrNrDc: uehId:6 ues:0
+NrNrDc: uehId:7 ues:0
+Nr: uehId:4 ues:0
+Nr: uehId:5 ues:0
+Nr: uehId:6 ues:0
+Nr: uehId:7 ues:0
+coli>/rpc/nrat/ue print -admitted
+uehId:6 ues:0
+uehId:7 ues:0
+uehId:8 ues:0
+uehId:9 ues:0
+uehId:10 ues:1
+coli>
+
+M2LU4194A> 
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> #		 Post Script CV and unset of all variables - This is modifiable to your needs      #
+
+M2LU4194A> ############################################################################################
+
+M2LU4194A> 
+
+M2LU4194A> 
+
+M2LU4194A> l-
+
+Log close: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240418-060009_M2LU4194A.log
+
+M2LU4194A> confb-
+
+M2LU4194A> gs-
+
+Perform a get before set = disabled
+
+M2LU4194A> 
+
+M2LU4194A> 
+
+M2LU4194A> #cvms post_$jobname_$date
+
+M2LU4194A> 
+
+M2LU4194A> #Keep the unset all after the cv so the variables can be used
+
+M2LU4194A> unset all 
+
+M2LU4194A> 
+
+M2LU4194A> #cmedit set NetworkElement=M7BAN764A,ComConnectivityInformation=1 ipAddress=11.242.0.98#
+Bye...
+Output has been logged to file /home/shared/common/Overnight_Work/Rehomes/Postchecks/M2LU4194A.log

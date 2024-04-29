@@ -1,0 +1,429 @@
+Logging to file /home/shared/common/Overnight_Work/Rehomes/Prechecks/L2LU8973A.log
+                        __  __  ____   _____
+                  /\   |  \/  |/ __ \ / ____|
+                 /  \  | \  / | |  | | (___  
+                / /\ \ | |\/| | |  | |\___ \ 
+               / ____ \| |  | | |__| |____) |
+              /_/    \_\_|  |_|\____/|_____/
+              OSS Framework for MoShell-24.0c 
+  Copyright (c) Ericsson AB 2001-2024 - All Rights Reserved
+              
+           
+$amosrb_pid = 2966983
+
+Checking ip contact...OK
+
+HELP MENU            : h
+BASIC MO COMMANDS    : m
+OTHER MO COMMANDS    : n
+OTHER COMMANDS       : o
+PM COMMANDS          : p
+QUIT                 : q
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> #				Script Foundation - Leave this for all scripts							   #
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> 
+
+L2LU8973A> confb+
+
+L2LU8973A> gs+
+
+Perform a get before set = enabled
+
+L2LU8973A> unset all
+
+L2LU8973A> l+
+
+Logging to file: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240421-210008_L2LU8973A.log
+
+L2LU8973A> 
+
+L2LU8973A> alt
+
+240421-21:00:08-0500 11.69.146.20 24.0c  stopfile=/tmp/2966802
+Looking up temporary_amos account... OK.
+Trying temporary_amos_gbadim1_291's password from amos lookupAccount ... OK
+
+$ssh_pid = 2967423
+
+Connected to 11.69.146.20 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=L2LU8973A,ManagedElement=L2LU8973A)
+
+Checking MOM version...MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9
+Parsing MOM (cached): /var/tmp/20240421-210001_2966676/MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.xml.cache.gz ...........................................................................................................................................................................................................Done.
+Using paramfile /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q4.txt
+Parsing file /opt/ericsson/amos/moshell/commonjars/pm/PARAM_MSRBS_23.Q4.txt ...................................................................................Done.
+Using imomdfile /opt/ericsson/amos/moshell/commonjars/pm/IMOMD_MSRBS_22.Q4.txt
+Using imomfile /opt/ericsson/amos/moshell/commonjars/pm/IMOM_MSRBS_23.Q4.txt
+
+Collecting Alarms...
+
+====================================================================================================================
+Date & Time (UTC)   S Specific Problem                    MO (AdditionalText/PC, AI)
+====================================================================================================================
+>>> Total: 0 Alarms (0 Critical, 0 Major)
+
+L2LU8973A> 
+
+L2LU8973A> uv sls_username > $user
+
+sls_username              = gbadim1
+
+$user = gbadim1
+
+L2LU8973A> $date = `date +%y%m%d-%H%M`
+
+$date = 240421-2100
+
+L2LU8973A> $Node = `echo "$nodename" | cut -c 2-9`
+
+$Node = 2LU8973A
+
+L2LU8973A> $L21 = L
+
+$L21 = L
+
+L2LU8973A> $L19 = B
+
+$L19 = B
+
+L2LU8973A> $L7 = D
+
+$L7 = D
+
+L2LU8973A> $L6 = E
+
+$L6 = E
+
+L2LU8973A> $N6 = K
+
+$N6 = K
+
+L2LU8973A> $N25 = A
+
+$N25 = A
+
+L2LU8973A> $L25 = T
+
+$L25 = T
+
+L2LU8973A> $N19 = J
+
+$N19 = J
+
+L2LU8973A> $N71 = K
+
+$N71 = K
+
+L2LU8973A> $2C = .*2$
+
+$2C = .*2$
+
+L2LU8973A> $1C = .*1$
+
+$1C = .*1$
+
+L2LU8973A> $allcell = TDD|FDD|NRCellDU|Nbiot
+
+$allcell = TDD|FDD|NRCellDU|Nbiot
+
+L2LU8973A> $FDD = EUtranCellFDD=
+
+$FDD = EUtranCellFDD=
+
+L2LU8973A> $TDD = EUtranCellTDD=
+
+$TDD = EUtranCellTDD=
+
+L2LU8973A> $NRCell = NRCellDU=
+
+$NRCell = NRCellDU=
+
+L2LU8973A> $NRSec25 = NRSectorCarrier=25-
+
+$NRSec25 = NRSectorCarrier=25-
+
+L2LU8973A> $NRSec6 = NRSectorCarrier=6-
+
+$NRSec6 = NRSectorCarrier=6-
+
+L2LU8973A> $NRSec19 = NRSectorCarrier=19-
+
+$NRSec19 = NRSectorCarrier=19-
+
+L2LU8973A> $LTESec = SectorEquipmentFunction=
+
+$LTESec = SectorEquipmentFunction=
+
+L2LU8973A> 
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> #		Change JobName and any parameter that needs changing case by case basis    		   #
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> # 		PUT A # SIGN IN FRONT OF ANYTHING YOU DONT WANT TO USE ON THIS SCRIPT  			   #   
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A>       
+
+L2LU8973A> #$arfcnDL = 507708
+
+L2LU8973A> #$jobname = Retune_Prechecks
+
+L2LU8973A> 
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> #				Script Specifics - This is modifiable to your needs						   #
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> #	   FOR SETM COMMANDS YOU HAVE TO REMOVE THE GS+ AND GS- from the script                #
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> ###############################
+
+L2LU8973A> #### PRECHECK / LOCK / CV #####
+
+L2LU8973A> ###############################
+
+L2LU8973A> 
+
+L2LU8973A> 
+
+L2LU8973A> lt all
+
+240421-21:00:19-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+Connected to 11.69.146.20 (SubNetwork=ONRM_ROOT_MO,SubNetwork=Philadelphia,MeContext=L2LU8973A,ManagedElement=L2LU8973A)
+
+Last MO: 18071. Loaded 18071 MOs. Total: 18072 MOs.
+
+L2LU8973A> pr vlanport=
+
+240421-21:00:33-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+===================================================================================
+Proxy  MO
+===================================================================================
+18069  Transport=1,VlanPort=3425
+18070  Transport=1,VlanPort=4001
+18071  Transport=1,VlanPort=ERAN
+===================================================================================
+Total: 3 MOs
+
+L2LU8973A> get address address
+
+240421-21:00:33-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                address           42.197.146.20/27
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                addressIPv4Id     1
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                primaryAddress    true
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1                usedAddress       42.197.146.20/27
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             address           11.69.146.20/27
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             addressIPv4Id     1
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             primaryAddress    true
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1             usedAddress       11.69.146.20/27
+=================================================================================================================
+Total: 2 MOs
+
+
+L2LU8973A> st FDD|TDD|NRCellDU|NbIot
+
+240421-21:00:34-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+  702  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllRssiNpuschReadings
+  703  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllSinrNpuschReadings
+  704  1 (UNLOCKED)                SystemFunctions=1,HealthCheckM=1,HcRule=ENodeBFunction_CheckNbiotCllStatus
+===================================================================================
+Total: 3 MOs
+
+L2LU8973A> 
+
+L2LU8973A> st termpointtognb=1
+
+240421-21:00:34-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+===================================================================================
+Total: 0 MOs
+
+L2LU8973A> get ^GNB.*=1 gNBId$
+
+240421-21:00:34-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+=================================================================================================================
+Total: 0 MOs
+
+
+L2LU8973A> get FUnction=1 nbid$
+
+240421-21:00:34-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+ENodeBFunction=1                                        eNBId             59025
+=================================================================================================================
+Total: 1 MOs
+
+
+L2LU8973A> st term
+
+240421-21:00:35-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+===================================================================================
+Proxy  Adm State     Op. State     MO
+===================================================================================
+   79  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,EUtraNetwork=1,ExternalENodeBFunction=310260-331984,TermPointToENB=310260-331984
+  213  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=CR1vMME1
+  214  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=DC1vMME1
+  215  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=DC1vMME2
+  216  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=DC2vMME1
+  217  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=NE1CMM01
+  218  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=NE1vMME1
+  219  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=NE1vMME2
+  220  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=NE4vMME1
+  221  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=PH1vMME1
+  222  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=PH2vMME1
+  223  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=PH3nMME1
+  224  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=PH3vMME1
+  225  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=UP1vMME1
+  226  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=UP2nMME1
+  227  1 (UNLOCKED)  0 (DISABLED)  ENodeBFunction=1,TermPointToMme=UP2vMME1
+===================================================================================
+Total: 16 MOs
+
+L2LU8973A> 
+
+L2LU8973A> enm cmedit get *$Node* 
+
+240421-21:00:35-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+
+
+Not allowed to run from amosbatch.
+
+
+L2LU8973A> enm cmedit get *$Node* AddressIPv4.(*) -t
+
+240421-21:00:35-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+
+
+Not allowed to run from amosbatch.
+
+
+L2LU8973A> 
+
+L2LU8973A> hget AddressIPv4 ^address$
+
+240421-21:00:35-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+.
+=================================================================================================================
+MO                                          address         
+=================================================================================================================
+Router=LTE,InterfaceIPv4=1,AddressIPv4=1    42.197.146.20/27
+Router=vr_OAM,InterfaceIPv4=1,AddressIPv4=1 11.69.146.20/27 
+=================================================================================================================
+Total: 2 MOs
+
+Added 2 MOs to group: hget_group
+
+L2LU8973A> 
+
+L2LU8973A> pmxz NRCell PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$ -m 3
+
+240421-21:00:35-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+Parsing PM cache: /home/shared/gbadim1/moshell/jarxml/PMCACHE_MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9.txt.gz ... Done.
+
+........................
+get /rop/A20240421.2230-2245_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2230-2245_L2LU8973A.xml.gz ... OK
+get /rop/A20240421.2245-2300_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2245-2300_L2LU8973A.xml.gz ... OK
+get /rop/A20240421.2300-2315_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2300-2315_L2LU8973A.xml.gz ... OK
+get /rop/A20240421.2315-2330_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2315-2330_L2LU8973A.xml.gz ... OK
+get /rop/A20240421.2330-2345_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2330-2345_L2LU8973A.xml.gz ... OK
+get /rop/A20240421.2345-0000_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2345-0000_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0000-0015_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0000-0015_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0015-0030_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0015-0030_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0030-0045_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0030-0045_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0045-0100_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0045-0100_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0100-0115_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0100-0115_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0115-0130_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0115-0130_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0130-0145_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0130-0145_L2LU8973A.xml.gz ... OK
+get /rop/A20240422.0145-0200_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0145-0200_L2LU8973A.xml.gz ... OK
+
+(gzip -dc /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2300-2315_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2315-2330_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2330-2345_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240421.2345-0000_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0000-0015_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0015-0030_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0030-0045_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0045-0100_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0100-0115_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0115-0130_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0130-0145_L2LU8973A.xml.gz /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/pmfiles/11.69.146.20/rop/A20240422.0145-0200_L2LU8973A.xml.gz | LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk -vusergawk="LANG=C LC_ALL=C /opt/ericsson/amos/moshell/gawk" -f /opt/ericsson/amos/moshell/commonjars/pmExtract.awk  "nrcell" "PMENDCSETUPUEATT$|PMENDCSETUPUESUCC$"   | sort | uniq | /usr/bin/perl /opt/ericsson/amos/moshell/pmXtab -q -pval 0 -mom /var/tmp/20240421-210001_2966676/pmxmomLog2966802  -cols time -fmt txt -m "[M]anagedElement=[^,]+,(?:\w+=1,){0,1}((\w+=[^,]+,*)+$)"  )2>&1 | tee -a /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240421-210008_L2LU8973A.log
+
+Report from 2024-04-21 23:00 UTC to 2024-04-22 01:59 UTC (12 ropfiles)
+Node SW: CXP9024418/15_R85C47 (23.Q4.0-3)
+
+Date: 
+Object Counter
+
+
+L2LU8973A> ue print -admitted
+Checking available boards on node...
+
+Collecting RCS board data ...
+...................................................................
+.
+Last MO: 18071. Loaded 18071 MOs. Total: 18072 MOs.
+................
+.....
+240421-21:01:03-0500 11.69.146.20 24.0c MSRBS_NODE_MODEL_23.Q4_643.28133.125_0bc9 stopfile=/tmp/2966802
+coli>/lrat/ue print -admitted
+Found no active cells!
+coli>/rc/nrat/ue print -admitted
+NRAT is dormant.
+coli>/rpc/nrat/ue print -admitted
+NRAT is dormant.
+coli>
+
+L2LU8973A> 
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> #		 Post Script CV and unset of all variables - This is modifiable to your needs      #
+
+L2LU8973A> ############################################################################################
+
+L2LU8973A> 
+
+L2LU8973A> 
+
+L2LU8973A> l-
+
+Log close: /ericsson/log/amos/moshell_logfiles/gbadim1/logs_moshell/sessionlog/240421-210008_L2LU8973A.log
+
+L2LU8973A> confb-
+
+L2LU8973A> gs-
+
+Perform a get before set = disabled
+
+L2LU8973A> 
+
+L2LU8973A> 
+
+L2LU8973A> #cvms post_$jobname_$date
+
+L2LU8973A> 
+
+L2LU8973A> #Keep the unset all after the cv so the variables can be used
+
+L2LU8973A> unset all 
+
+L2LU8973A> 
+
+L2LU8973A> #cmedit set NetworkElement=M7BAN764A,ComConnectivityInformation=1 ipAddress=11.242.0.98#
+Bye...
+Output has been logged to file /home/shared/common/Overnight_Work/Rehomes/Prechecks/L2LU8973A.log
